@@ -1,25 +1,46 @@
 package com.planbtech.cosmos.controller;
 
 import com.planbtech.cosmos.dto.UserDTO;
-import com.planbtech.cosmos.services.impl.UserServices;
+import com.planbtech.cosmos.model.entites.User;
+import com.planbtech.cosmos.services.IUserServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "user")
+@RequestMapping(value = "/user")
 public class UserController {
 
 
     @Autowired
-    private UserServices userServices;
+    private IUserServices iuserServices;
 
-    @GetMapping
-    public List<UserDTO> findAll() {
-        List<UserDTO> result = userServices.findAll();
-        return result;
+
+    @GetMapping("/list")
+    public ResponseEntity<List<UserDTO>> findAll() {
+       var list = iuserServices.findAll();
+
+       return ResponseEntity.ok(list);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<UserDTO> findById(@PathVariable Long id) {
+        var user = iuserServices.findById(id);
+
+        return ResponseEntity.ok(user);
+    }
+
+    @PostMapping
+    public ResponseEntity<UserDTO> create(@RequestBody User userToCreate) {
+        UserDTO userCreated = new UserDTO(iuserServices.create(userToCreate));
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(userCreated.getId())
+                .toUri();
+        return ResponseEntity.created(location).body(userCreated);
     }
 }

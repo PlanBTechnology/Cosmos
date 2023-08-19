@@ -5,10 +5,12 @@ import com.planbtech.cosmos.model.entites.User;
 import com.planbtech.cosmos.repositories.UserRepository;
 import com.planbtech.cosmos.services.IUserServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
+@Service
 public class UserServices implements IUserServices {
 
     @Autowired

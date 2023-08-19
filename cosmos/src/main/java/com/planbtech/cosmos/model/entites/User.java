@@ -15,7 +15,7 @@ public class User implements IUser {
     private String lastName;
     private String email;
     private String password;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Address address;
 
     //Constructors
