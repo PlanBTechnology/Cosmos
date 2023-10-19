@@ -8,14 +8,13 @@ public interface IUser {
     public String getLastName();
     public String getEmail();
     public String getPassword();
-    public Address getAddress();
 
 
     public void setFirstName(String firstName);
     public void setLastName(String lastName);
     public void setEmail(String email);
     public void setPassword(String password);
-    public void setAddress(Address address);
+
 
 
     //Other methods
