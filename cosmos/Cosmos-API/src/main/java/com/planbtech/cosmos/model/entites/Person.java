@@ -1,11 +1,16 @@
 package com.planbtech.cosmos.model.entites;
 
 import com.planbtech.cosmos.model.Interfaces.IPerson;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
-
+@Entity
+@Table(name = "Persons")
 public class Person implements IPerson {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     private String name;
 
