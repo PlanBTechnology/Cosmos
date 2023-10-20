@@ -21,6 +21,8 @@ public class Person implements IPerson {
 
     private String cellphone;
 
+    @ManyToOne
+    @JoinColumn(name = "address_id")
     private Address adress;
 
     private String gender;
