@@ -15,8 +15,7 @@ public class User implements IUser {
     private String lastName;
     private String email;
     private String password;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Address address;
+
 
     //Constructors
     public User() {
@@ -29,7 +28,7 @@ public class User implements IUser {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.address = address;
+
     }
 
     //Getters and setters
@@ -82,15 +81,9 @@ public class User implements IUser {
         this.id = id;
     }
 
-    @Override
-    public Address getAddress() {
-        return address;
-    }
 
-    @Override
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+
+
 
     @Override
     public boolean equals(Object o) {
