@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ProConnect'`, () => {
+  it(`should have as title 'Proconnect'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ProConnect');
+    expect(app.title).toEqual('Proconnect');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ProConnect app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Proconnect app is running!');
   });
 });
