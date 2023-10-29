@@ -29,24 +29,33 @@ export class LoginComponent {
     }
 
     // URL do servidor
-    const url = `https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome/1` 
+    const url = `https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome?email=${this.email}` 
 
-    // Faz uma solicitação GET para o servidor
-    variavel = this.http.get <usuario> (url).subscribe(
-      (response: any) => {
+    variavel = this.http.get<usuario[]>(url).subscribe(
+      (response: usuario[]) => {
         console.log(response);
-        if (response.LoginOk ) {
-          window.alert('Login efetuado com sucesso')
-          this.router.navigate(['./pag-inicial']);
+    
+        // Encontrar o usuário com o email fornecido na resposta
+        const user = response.find(user => user.email === this.email);
+    
+        if (user) {
+          // Usuário encontrado, agora compare as senhas
+          if (user.senha === this.senha) {
+            window.alert('Login efetuado com sucesso');
+            this.router.navigate(['./pag-inicial']);
+          } else {
+            window.alert('Email ou senha Incorretos');
+          }
         } else {
-          window.alert('Email ou Senha incorretos')
+          // Usuário não encontrado
+          window.alert('Usuário não encontrado');
         }
       },
       error => {
         console.error(error);
-        window.alert('Ocorreu um erro ao efetuar o login')
+        window.alert('Ocorreu um erro ao efetuar o login');
       }
-    )
+    );
   }
   cadastra(){
     alert(this.senha)
