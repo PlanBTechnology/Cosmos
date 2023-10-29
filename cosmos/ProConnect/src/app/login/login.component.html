@@ -7,30 +7,38 @@
   </div>
   <div class="container">
     <div class="row">
-      <form class="login-form" method="post">
+
+      <form class="login-form" method="get" (ngSubmit)="verificarUsuario()">
         <h2 style="font-size: 60px">Login</h2>
         <p>Entre na sua conta com dados que realizou ao se registrar.</p>
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="idEmail">Email</label>
+
           <input
             [(ngModel)]="email"
             type="email"
             id="idEmail"
             name="email"
-            required
-          />
+
+            required 
+            autocomplete="email"
+            [ngModelOptions]= "{standalone: true}" />
+          
         </div>
         <div class="form-group">
-          <label for="password">Senha</label>
+          <label for="Senha">Senha</label>
           <input
             [(ngModel)]="senha"
             type="password"
-            id="idSenha"
+            id="Senha"
             name="senha"
-            required
-          />
+            required 
+            autocomplete="current-password"
+            [ngModelOptions]= "{standalone: true}" />
+          
         </div>
-        <button onclick="verificarUsuario()">Entrar</button>
+        <button type="submit" (click)="verificarUsuario()">Entrar</button>
+
 
         <div class="esquece" style="text-align: right">
           <p><a href="recuperar.html">Esqueceu a senha?</a></p>

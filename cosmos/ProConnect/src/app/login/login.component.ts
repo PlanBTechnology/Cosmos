@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,28 +7,71 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'] 
 })
-export class LoginComponent {
-  email: String = "";
-  senha: String = "";
 
+export class LoginComponent {
+  email: string = "";
+  senha: string = "";
+  readonly apiURL = 'https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome/';
   constructor(private http: HttpClient, private router: Router){} 
   ngOnInit(): void{}
-
+  
   verificarUsuario(){
-    this.http.post('https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome', { email: this.email, senha: this.senha })
-      .subscribe((response: any) => {
+    window.alert('Verificando dados do usuário...');
+    var variavel;
+    console.log('Email:', this.email);
+    console.log('Senha:', this.senha);
+
+    // Verifica a senha com a expressão regular
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9!@#\$%\^&\*\(\)_\+\-=\[\]\{\};:'",<>\./?\\|]).{6,}$/;
+    if (!regex.test(this.senha)) {
+      window.alert('Senha fora dos padrões');
+      return;
+    }
+
+    // URL do servidor
+    const url = `https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome/1` 
+
+    // Faz uma solicitação GET para o servidor
+    variavel = this.http.get <usuario> (url).subscribe(
+      (response: any) => {
         console.log(response);
-        if (response.LoginOk){
+        if (response.LoginOk ) {
+          window.alert('Login efetuado com sucesso')
           this.router.navigate(['./pag-inicial']);
+        } else {
+          window.alert('Email ou Senha incorretos')
         }
-        else { 
+      },
+      error => {
+        console.error(error);
+        window.alert('Ocorreu um erro ao efetuar o login')
+      }
+    )
+  }
+  cadastra(){
+    alert(this.senha)
+    alert(this.email)
+    var aluno = {
+      email: this.email,
+      senha: this.senha
+    }
+   this.http.post(this.apiURL, aluno)
+   .subscribe(
+    resultado => {
+      console.log(resultado)
 
-        }
-  },
-  error => {
-    console.error(error);
-  });
-}
-}
+    },
+    erro => {
+      if(erro.status == 400){
+        console.log(erro)
+      }
+    }
+   )
 
-//const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9!@#\$%\^&\*\(\)_\+\-=\[\]\{\};:'",<>\./?\\|]).{6,}$/;//
+  }
+}
+class usuario{
+  email: string = "";
+  senha: string = "";
+}
+// Email: test@gmail.com  Senha: Senha#
