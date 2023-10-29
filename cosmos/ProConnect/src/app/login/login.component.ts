@@ -5,16 +5,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'] 
+  styleUrls: ['./login.component.css']
 })
 
 export class LoginComponent {
   email: string = "";
   senha: string = "";
-  readonly apiURL = 'https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome/';
-  constructor(private http: HttpClient, private router: Router){} 
+
+  constructor(private http: HttpClient, private router: Router){}
   ngOnInit(): void{}
-  
+
   verificarUsuario(){
     window.alert('Verificando dados do usuário...');
     var variavel;
@@ -29,18 +29,16 @@ export class LoginComponent {
     }
 
     // URL do servidor
-    const url = `https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome/1` 
+    const url = `https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome?email=${this.email}`
 
     // Faz uma solicitação GET para o servidor
-    variavel = this.http.get <usuario> (url).subscribe(
-      (response: any) => {
-        console.log(response);
-        if (response.LoginOk ) {
-          window.alert('Login efetuado com sucesso')
-          this.router.navigate(['./pag-inicial']);
-        } else {
-          window.alert('Email ou Senha incorretos')
-        }
+     this.http.get<usuario>(url ,{responseType: 'json'}).subscribe(
+      (response) => {
+
+        console.log(response[email]);
+
+
+
       },
       error => {
         console.error(error);
@@ -48,30 +46,9 @@ export class LoginComponent {
       }
     )
   }
-  cadastra(){
-    alert(this.senha)
-    alert(this.email)
-    var aluno = {
-      email: this.email,
-      senha: this.senha
-    }
-   this.http.post(this.apiURL, aluno)
-   .subscribe(
-    resultado => {
-      console.log(resultado)
-
-    },
-    erro => {
-      if(erro.status == 400){
-        console.log(erro)
-      }
-    }
-   )
-
-  }
 }
+// Email: test@gmail.com  Senha: Senha#
 class usuario{
   email: string = "";
   senha: string = "";
 }
-// Email: test@gmail.com  Senha: Senha#

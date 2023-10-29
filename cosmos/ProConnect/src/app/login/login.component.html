@@ -1,6 +1,3 @@
-<body>
-
-
 <div class="body">
   <div class="itemIMG">
     <img src="assets/logo.png" alt="logo" />
@@ -8,7 +5,7 @@
   <div class="container">
     <div class="row">
 
-      <form class="login-form" method="get" (ngSubmit)="verificarUsuario()">
+
         <h2 style="font-size: 60px">Login</h2>
         <p>Entre na sua conta com dados que realizou ao se registrar.</p>
         <div class="form-group">
@@ -20,10 +17,10 @@
             id="idEmail"
             name="email"
 
-            required 
+            required
             autocomplete="email"
             [ngModelOptions]= "{standalone: true}" />
-          
+
         </div>
         <div class="form-group">
           <label for="Senha">Senha</label>
@@ -32,12 +29,12 @@
             type="password"
             id="Senha"
             name="senha"
-            required 
+            required
             autocomplete="current-password"
             [ngModelOptions]= "{standalone: true}" />
-          
+
         </div>
-        <button type="submit" (click)="verificarUsuario()">Entrar</button>
+        <button (click)="verificarUsuario()">Entrar</button>
 
 
         <div class="esquece" style="text-align: right">
@@ -64,8 +61,8 @@
               "
           /></a>
         </div>
-      </form>
+
     </div>
   </div>
 </div>
-</body>
+
