@@ -9,9 +9,7 @@ class CosmosApplicationTests {
 
 	@Test
 	void contextLoads() {
-		fgf.(sasasa)
 
-				Assertions.
 	}
 
 }
