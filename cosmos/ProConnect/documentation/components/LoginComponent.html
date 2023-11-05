@@ -1,0 +1,934 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>proconnect documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">proconnect documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  LoginComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/login/login.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-login</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./login.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./login.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#apiURL" >apiURL</a>
+                            </li>
+                            <li>
+                                <a href="#email" >email</a>
+                            </li>
+                            <li>
+                                <a href="#senha" >senha</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cadastra" >cadastra</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#verificarUsuario" >verificarUsuario</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: HttpClient, router: Router)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/login/login.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Construtor da classe LoginComponent.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code>HttpClient</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Um serviço HTTP para fazer requisições à API.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Um serviço de roteamento para redirecionar os usuários após o login bem-sucedido.</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cadastra"></a>
+                    <span class="name">
+                        <span ><b>cadastra</b></span>
+                        <a href="#cadastra"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cadastra()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="89"
+                                    class="link-to-prism">src/app/login/login.component.ts:89</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método <code>cadastra()</code> da classe <code>LoginComponent</code>.
+Este método é utilizado para cadastrar um novo usuário no sistema.
+Ele faz uma requisição POST para a API com as informações de e-mail e senha do usuário.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/app/login/login.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método ngOnInit é chamado após a inicialização do componente.
+Neste componente, não há nenhuma inicialização específica a ser realizada, então o método está vazio.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="verificarUsuario"></a>
+                    <span class="name">
+                        <span ><b>verificarUsuario</b></span>
+                        <a href="#verificarUsuario"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>verificarUsuario()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="41"
+                                    class="link-to-prism">src/app/login/login.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método para verificar as credenciais do usuário e autenticá-lo.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="apiURL"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>apiURL</b></span>
+                        <a href="#apiURL"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome/&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/login/login.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>URL da API utilizada para autenticação de usuários.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="email"></a>
+                    <span class="name">
+                        <span ><b>email</b></span>
+                        <a href="#email"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/login/login.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>O endereço de e-mail inserido pelo usuário.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="senha"></a>
+                    <span class="name">
+                        <span ><b>senha</b></span>
+                        <a href="#senha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/login/login.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A senha inserida pelo usuário.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;app-login&#x27;,
+  templateUrl: &#x27;./login.component.html&#x27;,
+  styleUrls: [&#x27;./login.component.css&#x27;] 
+})
+/**
+ * LoginComponent é uma classe que representa o componente de login da aplicação.
+ * Ele lida com a autenticação de usuários e o redirecionamento para a página inicial.
+ */
+export class LoginComponent {
+  /** O endereço de e-mail inserido pelo usuário. */
+  email: string &#x3D; &quot;&quot;;
+
+   /** A senha inserida pelo usuário. */
+  senha: string &#x3D; &quot;&quot;;
+
+  /** URL da API utilizada para autenticação de usuários. */
+  readonly apiURL &#x3D; &#x27;https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome/&#x27;;
+
+  /**
+   * Construtor da classe LoginComponent.
+   * @param http Um serviço HTTP para fazer requisições à API.
+   * @param router Um serviço de roteamento para redirecionar os usuários após o login bem-sucedido.
+   */
+  constructor(private http: HttpClient, private router: Router){} 
+
+  /**
+   * Método ngOnInit é chamado após a inicialização do componente.
+   * Neste componente, não há nenhuma inicialização específica a ser realizada, então o método está vazio.
+   */
+  ngOnInit(): void{}
+  
+  
+  /**
+   * Método para verificar as credenciais do usuário e autenticá-lo.
+   */
+  verificarUsuario(){
+    window.alert(&#x27;Verificando dados do usuário...&#x27;);
+    var variavel;
+    console.log(&#x27;Email:&#x27;, this.email);
+    console.log(&#x27;Senha:&#x27;, this.senha);
+
+    // Verifica a senha com a expressão regular
+    const regex &#x3D; /^(?&#x3D;.*[a-z])(?&#x3D;.*[A-Z])(?&#x3D;.*[0-9!@#\$%\^&amp;\*\(\)_\+\-&#x3D;\[\]\{\};:&#x27;&quot;,&lt;&gt;\./?\\|]).{6,}$/;
+    if (!regex.test(this.senha)) {
+      window.alert(&#x27;Senha fora dos padrões&#x27;);
+      return;
+    }
+
+    // URL do servidor
+    const url &#x3D; &#x60;https://64e6a1f309e64530d1801dd3.mockapi.io/api/v1/Nome?email&#x3D;${this.email}&#x60; 
+
+    variavel &#x3D; this.http.get&lt;usuario[]&gt;(url).subscribe(
+      (response: usuario[]) &#x3D;&gt; {
+        console.log(response);
+    
+        // Encontrar o usuário com o email fornecido na resposta
+        const user &#x3D; response.find(user &#x3D;&gt; user.email &#x3D;&#x3D;&#x3D; this.email);
+    
+        if (user) {
+          // Usuário encontrado, agora compare as senhas
+          if (user.senha &#x3D;&#x3D;&#x3D; this.senha) {
+            window.alert(&#x27;Login efetuado com sucesso&#x27;);
+            this.router.navigate([&#x27;./pag-inicial&#x27;]);
+          } else {
+            window.alert(&#x27;Email ou senha Incorretos&#x27;);
+          }
+        } else {
+          // Usuário não encontrado
+          window.alert(&#x27;Usuário não encontrado&#x27;);
+        }
+      },
+      error &#x3D;&gt; {
+        console.error(error);
+        window.alert(&#x27;Ocorreu um erro ao efetuar o login&#x27;);
+      }
+    );
+  }
+
+  /**
+ * Método &#x60;cadastra()&#x60; da classe &#x60;LoginComponent&#x60;.
+ * Este método é utilizado para cadastrar um novo usuário no sistema.
+ * Ele faz uma requisição POST para a API com as informações de e-mail e senha do usuário.
+ */
+  cadastra(){
+
+    // Exibe os dados de e-mail e senha para teste
+    alert(this.senha)
+    alert(this.email)
+
+    // Cria um objeto com as informações do aluno (usuário)
+    var aluno &#x3D; {
+      email: this.email,
+      senha: this.senha
+    }
+
+    // Faz uma requisição POST para a API com as informações do aluno
+   this.http.post(this.apiURL, aluno)
+   .subscribe(
+    resultado &#x3D;&gt; {
+      console.log(resultado)
+      // Lógica para lidar com o resultado bem-sucedido, se necessário
+    },
+    erro &#x3D;&gt; {
+      if(erro.status &#x3D;&#x3D; 400){
+        console.log(erro)
+        // Lógica para lidar com erros de status 400, se necessário
+      }
+    }
+   )
+
+  }
+}
+/**
+ * Classe &#x60;usuario&#x60;.
+ * Esta classe representa um usuário com propriedades de e-mail e senha.
+ */
+class usuario{
+  /** O endereço de e-mail do usuário. */
+  email: string &#x3D; &quot;&quot;;
+
+  /** A senha do usuário. */
+  senha: string &#x3D; &quot;&quot;;
+}
+// Email: test@gmail.com  Senha: Senha#</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">
+
+
+&lt;div class&#x3D;&quot;body&quot;&gt;
+  &lt;div class&#x3D;&quot;itemIMG&quot;&gt;
+    &lt;img src&#x3D;&quot;assets/logo.png&quot; alt&#x3D;&quot;logo&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;form class&#x3D;&quot;login-form&quot; method&#x3D;&quot;get&quot;&gt;
+        &lt;h2 style&#x3D;&quot;font-size: 60px&quot;&gt;Login&lt;/h2&gt;
+        &lt;p&gt;Entre na sua conta com dados que realizou ao se registrar.&lt;/p&gt;
+        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+          &lt;label for&#x3D;&quot;idEmail&quot;&gt;Email&lt;/label&gt;
+          &lt;input
+            [(ngModel)]&#x3D;&quot;email&quot;
+            type&#x3D;&quot;email&quot;
+            id&#x3D;&quot;idEmail&quot;
+            name&#x3D;&quot;email&quot;
+            required 
+            autocomplete&#x3D;&quot;email&quot;
+            [ngModelOptions]&#x3D; &quot;{standalone: true}&quot; /&gt;
+          
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+          &lt;label for&#x3D;&quot;Senha&quot;&gt;Senha&lt;/label&gt;
+          &lt;input
+            [(ngModel)]&#x3D;&quot;senha&quot;
+            type&#x3D;&quot;password&quot;
+            id&#x3D;&quot;Senha&quot;
+            name&#x3D;&quot;senha&quot;
+            required 
+            autocomplete&#x3D;&quot;current-password&quot;
+            [ngModelOptions]&#x3D; &quot;{standalone: true}&quot; /&gt;
+          
+        &lt;/div&gt;
+        &lt;button type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;verificarUsuario()&quot;&gt;Entrar&lt;/button&gt;
+
+        &lt;div class&#x3D;&quot;esquece&quot; style&#x3D;&quot;text-align: right&quot;&gt;
+          &lt;p&gt;&lt;a href&#x3D;&quot;recuperar.html&quot;&gt;Esqueceu a senha?&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;container&quot;&gt;
+          &lt;h3 style&#x3D;&quot;margin-left: 30px&quot;&gt;Não possui uma conta?&lt;/h3&gt;
+          &lt;a href&#x3D;&quot;/Proconnect/src/app/pag-inicial/pag-inicial.component.html&quot;
+            &gt;&lt;input
+              type&#x3D;&quot;button&quot;
+              value&#x3D;&quot;Criar uma conta&quot;
+              style&#x3D;&quot;
+                text-align: center;
+                background-color: #38b5d0;
+                width: 100%;
+                height: 54px;
+                color: #fff;
+                padding: 10px 10px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+              &quot;
+          /&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./login.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">body {
+    font-family: Arial, sans-serif;
+    background-color: #5201A4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: #fff;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 44.92%;
+
+
+}
+
+.login-form {
+    text-align: left;
+    margin: 0;
+}
+
+.login-form h2 {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    text-align: center;
+    background-color: #38B5D0;
+    width: 93.8%;
+    height: 54px;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.row{
+    justify-content: flex-end;
+}
+
+
+.body{
+  width: 100%;
+  height: 100%;
+  background-color: #5201A4;
+  display: flex;
+  flex-direction: row;
+}
+
+p{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: &#x27;Inter&#x27;;
+    font-style: normal;
+    color: #8A8294;
+}
+.itemIMG{
+    align-items: center;
+    justify-content: center;
+    margin: 75px;
+    display: flex;
+    width: 25%;
+
+
+}
+.esquece{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: &#x27;Inter&#x27;;
+    font-style: normal;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="body">  <div class="itemIMG">    <img src="assets/logo.png" alt="logo" />  </div>  <div class="container">    <div class="row">      <form class="login-form" method="get">        <h2 style="font-size: 60px">Login</h2>        <p>Entre na sua conta com dados que realizou ao se registrar.</p>        <div class="form-group">          <label for="idEmail">Email</label>          <input            [(ngModel)]="email"            type="email"            id="idEmail"            name="email"            required             autocomplete="email"            [ngModelOptions]= "{standalone: true}" />                  </div>        <div class="form-group">          <label for="Senha">Senha</label>          <input            [(ngModel)]="senha"            type="password"            id="Senha"            name="senha"            required             autocomplete="current-password"            [ngModelOptions]= "{standalone: true}" />                  </div>        <button type="submit" (click)="verificarUsuario()">Entrar</button>        <div class="esquece" style="text-align: right">          <p><a href="recuperar.html">Esqueceu a senha?</a></p>        </div>        <div class="container">          <h3 style="margin-left: 30px">Não possui uma conta?</h3>          <a href="/Proconnect/src/app/pag-inicial/pag-inicial.component.html"            ><input              type="button"              value="Criar uma conta"              style="                text-align: center;                background-color: #38b5d0;                width: 100%;                height: 54px;                color: #fff;                padding: 10px 10px;                border: none;                border-radius: 3px;                cursor: pointer;                transition: background-color 0.3s;              "          /></a>        </div>      </form>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PagInicialComponent', 'selector': 'app-pag-inicial'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoginComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
