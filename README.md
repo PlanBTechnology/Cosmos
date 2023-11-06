@@ -51,11 +51,11 @@ https://github.com/PlanBTechnology/Cosmos
 
 <h2 id = "Pré-requisitos">Pré-requisitoso ⚠️ </h2>    
 <p>
-    Um maquina com acesso a web
+    Um maquina com um navegador web e acesso a internet
 </p>
 
 <h2 id = "Como rodar a aplicação">Como rodar a aplicação</h2>  
-<p>A plataforma funciona em qualuqer navegador, basta entrar no link do site.</p>
+<p>Entrar no link onde a plataforma se encontra.</p>
 
 <h2 id = "Testes realizados">Testes realizados</h2>
 <img src="C:\Projects\Fabrica\Imagens telas\LoginPage.PNG"/>
