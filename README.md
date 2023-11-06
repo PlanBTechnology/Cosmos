@@ -65,7 +65,7 @@ Testes realizados na tela de Login
 Esta sendo usado o H2 um banco de dados em memória que é reiniciado toda vez que a aplicação começa juntamente do MockAPI para testes
 
 <p>
- Está sendo desenvolvido o diagrama de Banco de dados pelo mySQL
+ Está sendo desenvolvido o diagrama de Banco de dados pelo MySQL
 </p>
 
 <h2 id = "Linguagens, dependencias e libs utilizadas"> Linguagens, dependencias e libs utilizadas 📚</h2> 
