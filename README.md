@@ -43,7 +43,7 @@ e então recruta-los para um projeto
     Paremaneto de Projetos
     </li>
     <li>
-    Gerenciamneto de Squad
+    Gerenciamento de Squad
     </li>
 </ul>
 <h2 id = "Distribuição">Distribuição</h2>
