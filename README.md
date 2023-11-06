@@ -58,7 +58,7 @@ https://github.com/PlanBTechnology/Cosmos
 <p>Entrar no link onde a plataforma se encontra.</p>
 
 <h2 id = "Testes realizados">Testes realizados</h2>
-<img src="C:\Projects\Fabrica\Imagens telas\LoginPage.PNG"/>
+<img src="Imagens telas\LoginPage.PNG"/>
 Testes realizados na tela de Login
 
 <h2 id = "Banco de Dados">Banco de Dados 🗂️</h2>  
@@ -86,13 +86,13 @@ Esta sendo usado o H2 um banco de dados em memória que é reiniciado toda vez q
 
 <p>Telas de cadastro em implementação</p>
 <img src="Imagens telas\Cadastro-1.PNG"/>
-<img src="\Imagens telas\Cadastro-2.PNG"/>
+<img src="Imagens telas\Cadastro-2.PNG"/>
 <p>Tela Principal em Desenvolvimento</p>
 <img src="Imagens telas\HomePage.PNG"/>
 <p>Tela de Testes em implementação</p>
 <img src="Imagens telas\TelaDeTestes.PNG"/>
 <p>Tela de Projetos em Desenvolvimento</p>
-<img src="\Imagens telas\MenuProjetos.PNG">
+<img src="Imagens telas\MenuProjetos.PNG">
 
 
 <h2 id = "Desenvolvedores/Contribuintes:">Desenvolvedores/Contribuintes:</h2> 
