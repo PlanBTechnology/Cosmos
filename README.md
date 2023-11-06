@@ -4,7 +4,7 @@
 
 ## Tópicos
 
-🔹 <a href = "#Descrição" >Descrição do projeto </a>
+🔹 <a href = "#Descricao" >Descrição do projeto </a>
 
 🔹 <a href = "#Funcionalidade">Funcionalidades </a>
 
@@ -30,7 +30,7 @@
 
 🔹 <a href = "#Informações Extras">Informações Extras</a>
 
-<h2 id = "Descrição">Descrição do projeto</h2>
+<h2 id = "Descricao">Descrição do projeto</h2>
 O projeto se trata de uma plataforma online onde se pode testar as habilidades de profissionais
 e então recruta-los para um projeto
 
