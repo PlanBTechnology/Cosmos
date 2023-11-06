@@ -3,98 +3,90 @@ package com.planbtech.cosmos.model.entites;
 import com.planbtech.cosmos.model.Interfaces.IUser;
 import jakarta.persistence.*;
 
+/**
+ * Entidade Usuario para representar a tabela Usuarios no banco de dados
+ */
 @Entity
 @Table(name = "Users")
 public class User implements IUser {
 
-    //Proprieties
+    /**
+     * Propiedade Id como chave primaria
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String firstName;
-    private String lastName;
-    private String email;
+
+    /**
+     * Propriedade Chave estrangeira que liga a tabela Pessoas
+     */
+    @OneToOne
+    @JoinColumn(name = "pessoa_id")
+    private Person pessoa;
+
+    /**
+     * Propiedade Senha
+     */
     private String password;
 
-
-    //Constructors
-    public User() {
-
-    }
-
-    public User(Long id,String firstName, String lastName, String email, String password, Address address) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-
-    }
-
-    //Getters and setters
+    /**
+     * Metodo para pegar a Pessoa ao qual o Usuario esta ligado
+     *
+     * @return {@code Person} que o usuario esta lidado
+     */
     @Override
-    public String getFirstName() {
-        return this.firstName;
+    public Person getPerson() {
+        return null;
     }
 
-    @Override
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    @Override
-    public String getEmail() {
-        return this.email;
-    }
-
+    /**
+     * metodo para pegar a senha do Usuario
+     *
+     * @return {@code String} a senha do usuario
+     */
     @Override
     public String getPassword() {
         return this.password;
     }
 
+    /**
+     * Metodo para vincularum uma pessoa ao usuario
+     *
+     * @param pessoa a pessoa aser vinculada
+     */
     @Override
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setPerson(Person pessoa) {
+
     }
 
-    @Override
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
-    @Override
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
+    /**
+     * Metodo para inserir a senha do usuario
+     *
+     * @param password senha a ser inserida
+     */
     @Override
     public void setPassword(String password) {
         this.password = password;
     }
 
 
+    /**
+     * Metodo para pegar o Id do Usuario
+     *
+     * @return {@code Long} o id do Usuario
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * mMetodo para inserir o id do Usuario
+     *
+     * @param id a ser inserido
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
-
-
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof User user)) return false;
-
-        return getId() != null ? getId().equals(user.getId()) : user.getId() == null;
-    }
-
-    @Override
-    public int hashCode() {
-        return getId() != null ? getId().hashCode() : 0;
-    }
 }

@@ -1,0 +1,8 @@
+com.planbtech.cosmos
+com.planbtech.cosmos.controller
+com.planbtech.cosmos.dto
+com.planbtech.cosmos.model.entites
+com.planbtech.cosmos.model.Interfaces
+com.planbtech.cosmos.repositories
+com.planbtech.cosmos.services
+com.planbtech.cosmos.services.impl

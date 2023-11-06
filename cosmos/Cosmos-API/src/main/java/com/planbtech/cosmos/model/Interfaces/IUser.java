@@ -1,26 +1,39 @@
 package com.planbtech.cosmos.model.Interfaces;
 
-import com.planbtech.cosmos.model.entites.Address;
 
+import com.planbtech.cosmos.model.entites.Person;
+
+/**
+ * Interface de Molde para a classe Usuario
+ */
 public interface IUser {
-    //Getters and Setters
-    public String getFirstName();
-    public String getLastName();
-    public String getEmail();
+
+    /**
+     * Metodo para pegar a Pessoa ao qual o Usuario esta ligado
+     *
+     * @return {@code Person} que o usuario esta lidado
+     */
+    public Person getPerson();
+
+    /**
+     * metodo para pegar a senha do Usuario
+     *
+     * @return {@code String} a senha do usuario
+     */
     public String getPassword();
 
+    /**
+     * Metodo para vincularum uma pessoa ao usuario
+     *
+     * @param pessoa a pessoa aser vinculada
+     */
+    public void setPerson(Person pessoa);
 
-    public void setFirstName(String firstName);
-    public void setLastName(String lastName);
-    public void setEmail(String email);
+    /**
+     * Metodo para inserir a senha do usuario
+     *
+     * @param password senha a ser inserida
+     */
     public void setPassword(String password);
-
-
-
-    //Other methods
-    public String toString();
-    public boolean equals(Object o);
-    public int hashCode();
-
 
 }

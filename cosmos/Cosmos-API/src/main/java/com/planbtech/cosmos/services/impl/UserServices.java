@@ -10,12 +10,24 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+/**
+ * Aplicacao da interface services
+ */
 @Service
 public class UserServices implements IUserServices {
 
+    /**
+     *Utilizando UserRepository para realizar a conexao com o banco de dados
+     */
     @Autowired
     private UserRepository userRepository;
 
+    /**
+     * Metodo que retorna um usuario
+     *
+     * @param id do usuario a ser buscado
+     * @return {@code UserDTO} do Usuario encontrado
+     */
     @Override
     public UserDTO findById(Long id) {
         User result = userRepository.findById(id).orElseThrow(NoSuchElementException::new);
@@ -23,6 +35,11 @@ public class UserServices implements IUserServices {
         return  dto;
     }
 
+    /**
+     * Metodo para retornar todos os usuarios do banco de dados
+     *
+     * @return {@code List<UserDTO>} uma lista de usuario
+     */
     @Override
     public List<UserDTO> findAll() {
         List<User> result = userRepository.findAll();
@@ -30,6 +47,12 @@ public class UserServices implements IUserServices {
         return dto;
     }
 
+    /**
+     * Metodo para inserir um usario no banco de dados
+     *
+     * @param userToCreate informações a serem cadastradas
+     * @return {@code User} as informações que foram cadastradas
+     */
     @Override
     public User create(User userToCreate) {
 
