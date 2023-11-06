@@ -83,8 +83,7 @@ Esta sendo usado o H2 um banco de dados em memória que é reiniciado toda vez q
 
 
 <h2 id = "Recursos de inseridos">Recursos de inseridos 🧰</h2>  
-<p>Tela de login Inserida</p>
-<img src="C:\Projects\Fabrica\Imagens telas\LoginPage.PNG"/>
+
 <p>Telas de cadastro em implementação</p>
 <img src="C:\Projects\Fabrica\Imagens telas\Cadastro-1.PNG"/>
 <img src="C:\Projects\Fabrica\Imagens telas\Cadastro-2.PNG"/>
