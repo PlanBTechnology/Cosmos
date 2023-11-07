@@ -74,7 +74,7 @@ Esta sendo usado o H2 um banco de dados em memória que é reiniciado toda vez q
 
 ![MySQL](	https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
-![Angular](https://img.shields.io/badge/Angular-FFFFFF?style=for-the-badge&logo=angular&logoColor=red)
+![](https://img.shields.io/badge/Angular-FFFFFF?style=for-the-badge&logo=angular&logoColor=red)
 
 ![SpringBoot](https://img.shields.io/badge/SpingBoot-FFFFFF?style=for-the-badge&logo=springboot&logoColor=green)
 
