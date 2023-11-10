@@ -60,7 +60,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<UserDTO> create(@RequestBody User userToCreate) {
         UserDTO userCreated = new UserDTO(iuserServices.create(userToCreate));
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+        URI location = ServletUriComponentsBuil. der.fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(userCreated.getId())
                 .toUri();
