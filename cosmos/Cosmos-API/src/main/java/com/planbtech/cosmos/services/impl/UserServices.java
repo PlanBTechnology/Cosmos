@@ -59,6 +59,7 @@ public class UserServices implements IUserServices {
         if(userToCreate.getId() != null && userRepository.existsById(userToCreate.getId())){
             throw new IllegalArgumentException("User already exists");
         }
+        //Implementar metodos de verificação utilizando regex, para que as informações estejam dentro do padrão, como a senha, CPF
 
         return userRepository.save(userToCreate);
     }
