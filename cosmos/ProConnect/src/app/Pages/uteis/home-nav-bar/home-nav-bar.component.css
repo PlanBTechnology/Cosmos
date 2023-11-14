@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.TesteButton{
+  border: 2px;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+  color: #FFF;
+  margin: 5px;
+}
+
+.TesteButtonLi{
+
+  background-color: #68B2C2;
+  text-decoration: none;
+  padding: 8px, 12px, 8px, 12px;
+  width: 170px;
+  height: 30px;
+  justify-content: center;
+}
+
+.ProjectsButton{
+  border: 2px;
+  text-decoration: none;
+  height: 25px;
+  color: #FFF;
+  margin: 5px;
+  justify-content: center;
+  display: flex;
+
+}
+
+.ProjectsButtonLi{
+
+  background-color: #68B2C2;
+  text-decoration: none;
+  width: 150px;
+  height: 30px;
+  padding: 8px, 12px, 8px, 12px;
+  justify-content: center;
+  margin-left: 20px;
+
+}
+
+.MenuBar{
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.leftSideBar{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.rightSideBar{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}

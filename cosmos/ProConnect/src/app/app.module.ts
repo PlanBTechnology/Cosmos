@@ -11,6 +11,8 @@ import { PrincipalComponent } from './Pages/Pincipal/principal.component';
 import { PincipalNavBarComponent } from './Pages/uteis/pincipal-nav-bar/pincipal-nav-bar.component';
 import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { HomeNavBarComponent } from './Pages/uteis/home-nav-bar/home-nav-bar.component';
+import { BoxContentComponent } from './Pages/uteis/box-content/box-content.component';
+import { MainContentComponent } from './Pages/uteis/main-content/main-content.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HomeNavBarComponent } from './Pages/uteis/home-nav-bar/home-nav-bar.com
     PrincipalComponent,
     PincipalNavBarComponent,
     CadastroComponent,
-    HomeNavBarComponent
+    HomeNavBarComponent,
+    BoxContentComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
