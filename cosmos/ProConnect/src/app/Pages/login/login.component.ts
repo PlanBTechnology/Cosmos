@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { PincipalNavBarComponent } from '../uteis/pincipal-nav-bar/pincipal-nav-bar.component';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   email: string = "";
   senha: string = "";
-
+  estado = new PincipalNavBarComponent;
   constructor(private http: HttpClient, private router: Router){}
   ngOnInit(): void{}
 
@@ -42,7 +44,8 @@ export class LoginComponent {
           // Usuário encontrado, agora compare as senhas
           if (user.senha === this.senha) {
             window.alert('Login efetuado com sucesso');
-            this.router.navigate(['./pag-inicial']);
+            this.router.navigate(['/home']);
+            this.estado.changeStatus();
           } else {
             window.alert('Email ou senha Incorretos');
           }

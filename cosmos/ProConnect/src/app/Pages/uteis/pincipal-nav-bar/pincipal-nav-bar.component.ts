@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class PincipalNavBarComponent {
 
+  public estado:boolean = true
+  changeStatus(){
+
+    this.estado = !this.estado
+    console.log(this.estado);
+  }
 }

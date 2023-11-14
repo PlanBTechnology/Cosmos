@@ -4,9 +4,14 @@
       <li><a routerLink="/home" ><img src="../../../../assets/logo.png" alt="" height="40px" style="margin-top: 5px;"></a></li>
 
     </ul>
-    <ul class="rightSideBar">
-      <li class="LoginButtonLi"><a routerLink="/login" class="LoginButton">Login</a></li>
+    <ul class="rightSideBar" *ngIf="estado">
+      <li class="LoginButtonLi"><a routerLink="/login" class="LoginButton" (click)="changeStatus()">Login</a></li>
       <li class="cadButtonLi"><a routerLink="/cadastro" class="cadButton">Cadastro</a></li>
+    </ul>
+    <ul class="rightSideBar" *ngIf="!estado">
+      <li class="TesteButtonLi"><a routerLink="/teste">Teste de Competência</a></li>
+      <li class="ProjetosButtonLi"><a routerLink="/Projects">Meus Projetos</a></li>
     </ul>
   </nav>
 </div>
+<router-outlet></router-outlet>

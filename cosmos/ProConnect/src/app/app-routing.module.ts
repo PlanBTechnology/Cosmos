@@ -7,7 +7,8 @@ import { PagInicialComponent } from './Pages/pag-inicial/pag-inicial.component';
 const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'main', component:PrincipalComponent},
-  {path:'home', component:PagInicialComponent}
+  {path:'home', component:PagInicialComponent},
+  {path: '**', component: PrincipalComponent}
 ];
 
 @NgModule({
