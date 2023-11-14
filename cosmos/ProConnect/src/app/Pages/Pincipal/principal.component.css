@@ -1,4 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .container{
   display: flex;
   flex-direction: row;
+  background-color: #68B2C2;
+  height: 100%;
+  width: 100%;
+}
+
+.body{
+width: 100%;
+height: 100%;
+background-color: #68B2C2;
+display: flex;
+flex-direction: row;
+}
+
+.apresentacao{
+  background-color: #FFF;
+  border-radius: 20px;
+  margin-left: 100px;
+  margin-top: 40px;
+  height: 80%;
+  width: 80%;
+}
+
+.Titulo{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.Introducao{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: large;
+
+}
+
+.TextoExplicativo{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 15px;
+}
+
+.UlBotoes{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.LoginLi{
+  text-decoration: none;
+  background-color: #68B2C2;
+  border-radius: 10px;
+  width: 120px;
+  justify-content: center;
+  display: flex;
+}
+
+.CadLi{
+  text-decoration: none;
+  background-color: #68B2C2;
+  border-radius: 10px;
+  width: 140px;
+  justify-content: center;
+  display: flex;
+}
+
+.loginButton{
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cadButton{
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botoes{
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+.pergunta{
+  margin-top: 30px;
+  margin-left: 50px;
+
+}
+
+.paragrafoPergunta{
+  font-size: 30px;
 }

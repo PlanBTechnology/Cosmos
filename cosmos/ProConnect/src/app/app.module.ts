@@ -9,6 +9,8 @@ import { PagInicialComponent } from './Pages/pag-inicial/pag-inicial.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PrincipalComponent } from './Pages/Pincipal/principal.component';
 import { PincipalNavBarComponent } from './Pages/uteis/pincipal-nav-bar/pincipal-nav-bar.component';
+import { CadastroComponent } from './Pages/cadastro/cadastro.component';
+import { HomeNavBarComponent } from './Pages/uteis/home-nav-bar/home-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PincipalNavBarComponent } from './Pages/uteis/pincipal-nav-bar/pincipal
     LoginComponent,
     PagInicialComponent,
     PrincipalComponent,
-    PincipalNavBarComponent
+    PincipalNavBarComponent,
+    CadastroComponent,
+    HomeNavBarComponent
   ],
   imports: [
     BrowserModule,

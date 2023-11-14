@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoggedService } from './services/Logged.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Proconnect';
+  usuarioLogado = false
 
+  constructor(loggedSevice: LoggedService ){
+    loggedSevice.getSituacaoLoginUsuario().subscribe(estaLogado=> {this.usuarioLogado = estaLogado})
+  }
 }

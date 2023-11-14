@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { PincipalNavBarComponent } from '../uteis/pincipal-nav-bar/pincipal-nav-bar.component';
 
 
 @Component({
@@ -13,7 +12,8 @@ import { PincipalNavBarComponent } from '../uteis/pincipal-nav-bar/pincipal-nav-
 export class LoginComponent {
   email: string = "";
   senha: string = "";
-  estado = new PincipalNavBarComponent;
+
+
   constructor(private http: HttpClient, private router: Router){}
   ngOnInit(): void{}
 
@@ -45,7 +45,7 @@ export class LoginComponent {
           if (user.senha === this.senha) {
             window.alert('Login efetuado com sucesso');
             this.router.navigate(['/home']);
-            this.estado.changeStatus();
+
           } else {
             window.alert('Email ou senha Incorretos');
           }
