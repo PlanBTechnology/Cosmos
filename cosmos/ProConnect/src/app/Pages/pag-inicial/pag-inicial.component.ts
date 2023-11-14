@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 
 @Component({
@@ -6,10 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './pag-inicial.component.html',
   styleUrls: ['./pag-inicial.component.css']
 })
-export class PagInicialComponent implements OnInit{
+export class PagInicialComponent {
 
-  ngOnInit(): void {
-
-  }
+  teste:string = 'Testes recomendados';
 
 }

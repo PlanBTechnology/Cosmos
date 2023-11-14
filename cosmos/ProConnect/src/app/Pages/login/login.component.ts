@@ -44,7 +44,7 @@ export class LoginComponent {
           // Usuário encontrado, agora compare as senhas
           if (user.senha === this.senha) {
             window.alert('Login efetuado com sucesso');
-            this.router.navigate(['/home']);
+            this.router.navigate(['/user']);
 
           } else {
             window.alert('Email ou senha Incorretos');
