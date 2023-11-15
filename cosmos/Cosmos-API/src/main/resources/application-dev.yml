@@ -3,18 +3,18 @@ spring:
     url: jdbc:h2:mem:cosmos
     username: hfa
     password:
-  jpa:
-    show-sql: true
-    open-in-view: false
-    hibernate:
-      ddl-auto: create
-    properties:
+    jpa:
+      show-sql: true
+      open-in-view: false
       hibernate:
-        format_sql: true
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
-      settings:
-        trace: false
-        web-allow-others: false
+        ddl-auto: create
+      properties:
+        hibernate:
+          format_sql: true
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+        settings:
+          trace: false
+          web-allow-others: false

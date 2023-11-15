@@ -9,6 +9,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BoxContentComponent{
 
   @Input() titulo:String = ''
+  opcao:string = ''
+  numero:string = ''
+  @Input() conteudos:Array<contet> = []
+}
 
+export class contet{
+  titulo:string = ''
+  texto:string = ''
 
+  constructor(titulo:string, texto:string){
+    this.titulo = titulo
+    this.texto = texto
+
+  }
 }

@@ -3,6 +3,7 @@ package com.planbtech.cosmos.model.entites;
 import com.planbtech.cosmos.model.Interfaces.IProfile;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +24,7 @@ public class Profile implements IProfile {
     /**
      * Propriedade de lista das habilidades
      */
-    @Nullable
-    private ArrayList<Abilitie> abilities = new ArrayList<>();
+
 
     /**
      * Metodo para pegar o Id do Perfil

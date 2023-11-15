@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class MainContentComponent {
 
+  posts:Array<mainPost> = []
+}
+
+class mainPost{
+  img:string = '';
+  name:string = '';
+  texto:string = '';
+  post:string = '';
+
+  constructor(name:string, texto:string, post:string){
+    this.img = '';
+    this.name = name;
+    this.texto = texto;
+    this.post = post;
+
+  }
 }
