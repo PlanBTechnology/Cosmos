@@ -1,5 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import {contet} from '../uteis/box-content/box-content.component';
+import {mainPost} from '../uteis/main-content/main-content.component';
+
+
 
 
 @Component({
@@ -19,7 +22,7 @@ export class PagInicialComponent {
   conteudo7 = new contet("PdvTech", "JavaFX")
   conteudo8 = new contet("ProConnect", "Angular")
 
-
+  posts:Array<mainPost> = [new mainPost("Yago", "Bem vindo a minhas ferias", "../../assets/paisagem-natural.jpg"),]
   titulo1 = new BoxTemplate("Sugestões de Teste de Competência:")
   titulo2 = new BoxTemplate("Resumos dos Projetos:")
   conteudos:Array<contet> = [this.conteudo1, this.conteudo2, this.conteudo3, this.conteudo4]

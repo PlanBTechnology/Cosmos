@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main-content',
@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MainContentComponent {
 
-  posts:Array<mainPost> = []
+  @Input() posts:Array<mainPost> = []
 }
 
-class mainPost{
+export class mainPost{
   img:string = '';
   name:string = '';
   texto:string = '';
