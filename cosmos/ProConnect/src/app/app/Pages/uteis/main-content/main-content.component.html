@@ -1,0 +1,21 @@
+<div class="main-content">
+  <div class="main-titulo">
+    <h2 class="h2Titulo">Projetos que ganham vida</h2>
+    <h1 class="h1Titulo">começam aqui.</h1>
+  </div>
+  <div class="feed">
+    <div class="feedotitle">
+      <p>ProConnect Feed:</p>
+    </div>
+    <div *ngFor="let post of posts;index as i;first as isFirst" class="post">
+      <div class="identidade">
+        <img src="../../../../favicon.ico" alt="">
+        <p>{{post.name}}</p>
+      </div>
+      <div class="post-content">
+        <p>{{post.texto}}</p>
+        <img src="{{post.post}}" alt="" style="height: 300px;" class="">
+      </div>
+    </div>
+  </div>
+</div>
