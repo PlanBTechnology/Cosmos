@@ -22,10 +22,10 @@ export class PagInicialComponent {
   conteudo7 = new contet("PdvTech", "JavaFX")
   conteudo8 = new contet("ProConnect", "Angular")
 
-  posts:Array<mainPost> = [new mainPost("Yago", "Bem vindo a minhas ferias", "../../assets/paisagem-natural.jpg"),]
+  posts:Array<mainPost> = [new mainPost("Yago", "Bem vindo a minhas ferias", "../../assets/paisagem-natural.jpg"), new mainPost("Henrique", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur saepe vel sapiente, sit excepturi molestias qui hic suscipit doloremque eveniet aspernatur dolores ducimus neque officia facere mollitia dignissimos laudantium nesciunt expedita dolore. Ea quos quisquam deserunt nostrum officia architecto in obcaecati similique tempora nobis vel et maxime earum, veritatis ex ullam, rem repellat quo magni error! Dolorem impedit doloremque saepe deleniti ab odit obcaecati eaque, vel unde fugiat! Commodi minus odio beatae laborum facilis, qui doloribus quibusdam in incidunt rerum quisquam nulla voluptates aliquid quos voluptatum consectetur perferendis deleniti id, ea, nesciunt ex quia dolorum molestiae saepe! Fuga, quae quos.", "../../assets/paisagem-natural.jpg")]
   titulo1 = new BoxTemplate("Sugestões de Teste de Competência:")
   titulo2 = new BoxTemplate("Resumos dos Projetos:")
-  conteudos:Array<contet> = [this.conteudo1, this.conteudo2, this.conteudo3, this.conteudo4]
+  conteudos:Array<contet> = [this.conteudo1, this.conteudo2, this.conteudo3, this.conteudo4, new contet("Javascript", "10 Perguntas")]
   conteudos2:Array<contet> = [this.conteudo5, this.conteudo6, this.conteudo7, this.conteudo8]
 }
 
