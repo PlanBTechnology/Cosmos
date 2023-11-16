@@ -7,32 +7,22 @@
   display: flex;
   flex-direction: row;
   background-color: #68B2C2;
-  height: 100%;
-  width: 100%;
-}
-
-.body{
-width: 100%;
-height: 100%;
-background-color: #68B2C2;
-display: flex;
-flex-direction: row;
 }
 
 .apresentacao{
+  margin-top: 2%;
   background-color: #FFF;
   border-radius: 20px;
-  margin-left: 100px;
-  margin-top: 40px;
-  height: 80%;
-  width: 80%;
-  margin-bottom: 16px;
+  margin-left: 10%;
+  width: 50%;
+  padding-bottom: 2%;
+  margin-bottom: 4%;
 }
 
 .Titulo{
-  margin-top: 5px;
-  display: flex;
-  justify-content: center;
+  padding-top: 2%;
+  margin-left: 25%;
+  margin-bottom: 2%;
 }
 
 .Introducao{
@@ -43,9 +33,11 @@ flex-direction: row;
 }
 
 .TextoExplicativo{
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
 }
 
 .UlBotoes{
@@ -59,7 +51,7 @@ flex-direction: row;
   text-decoration: none;
   background-color: #68B2C2;
   border-radius: 10px;
-  width: 120px;
+  width: 30%;
   justify-content: center;
   display: flex;
 }
@@ -68,7 +60,7 @@ flex-direction: row;
   text-decoration: none;
   background-color: #68B2C2;
   border-radius: 10px;
-  width: 140px;
+  width: 30%;
   justify-content: center;
   display: flex;
 }
@@ -88,16 +80,14 @@ flex-direction: row;
 }
 
 .botoes{
-  margin-top: 50px;
-  margin-left: 30px;
-  margin-bottom: 20px;
-  margin-right: 30px;
+padding-left: 10%;
+padding-right: 10%;
+padding-top: 4%;
 }
 
 .pergunta{
-  margin-top: 30px;
-  margin-left: 50px;
-
+padding-top: 2%;
+padding-left: 10%;
 }
 
 .paragrafoPergunta{
