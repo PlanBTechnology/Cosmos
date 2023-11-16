@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrincipalComponent } from './principal.component';
+import { TelatesteComponent } from './telateste.component';
 
-describe('PrincipalComponent', () => {
-  let component: PrincipalComponent;
-  let fixture: ComponentFixture<PrincipalComponent>;
+describe('TelatesteComponent', () => {
+  let component: TelatesteComponent;
+  let fixture: ComponentFixture<TelatesteComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PrincipalComponent]
+      declarations: [TelatesteComponent]
     });
-    fixture = TestBed.createComponent(PrincipalComponent);
+    fixture = TestBed.createComponent(TelatesteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,36 @@
+<app-home-nav-bar></app-home-nav-bar>
+<div class="quiz-container">
+  <div style="display: flex; justify-content: center; flex-direction: column;">
+    <h1>Teste de Competência</h1>
+    <h2 style="margin-right:50px;">Javascript</h2>
+    <h3 style="margin-right: 40px;">Questão {{ currentQuestionIndex + 1 }} de {{ questions.length }}</h3>
+    <p class="question" style="max-width: 500px;">{{ questions[currentQuestionIndex].text }}</p>
+  </div>
+
+  <div>
+    <div style="margin-left: 250px;">
+      <div id="questions-container" style="height: 100%;">
+        <h3>Selecione uma alternativa:</h3>
+      </div>
+      <div>
+        <ul class="options">
+          <li *ngFor="let option of questions[currentQuestionIndex].options"  style="margin-bottom: 30px;">
+              <input
+
+              type="button"
+              [id]="'option' + option.value"
+              name="option"
+              [value]="option.value"
+              (click)="selectOption(option.value)"
+
+            />
+
+            <p style="margin-top: 11px;">{{option.letter}}</p>
+
+            <label [for]="'option' + option.value">{{ option.text }}</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

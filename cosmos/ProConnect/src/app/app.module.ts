@@ -13,6 +13,7 @@ import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { HomeNavBarComponent } from './Pages/uteis/home-nav-bar/home-nav-bar.component';
 import { BoxContentComponent } from './Pages/uteis/box-content/box-content.component';
 import { MainContentComponent } from './Pages/uteis/main-content/main-content.component';
+import { TelatesteComponent } from './Pages/telateste/telateste.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MainContentComponent } from './Pages/uteis/main-content/main-content.co
     CadastroComponent,
     HomeNavBarComponent,
     BoxContentComponent,
-    MainContentComponent
+    MainContentComponent,
+    TelatesteComponent
   ],
   imports: [
     BrowserModule,
