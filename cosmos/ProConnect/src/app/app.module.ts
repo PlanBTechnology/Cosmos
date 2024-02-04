@@ -14,6 +14,13 @@ import { HomeNavBarComponent } from './Pages/uteis/home-nav-bar/home-nav-bar.com
 import { BoxContentComponent } from './Pages/uteis/box-content/box-content.component';
 import { MainContentComponent } from './Pages/uteis/main-content/main-content.component';
 import { TelatesteComponent } from './Pages/telateste/telateste.component';
+import { CadMenuComponent } from './Pages/cadastro/uteis/cad-menu/cad-menu.component';
+import { FooterPageComponent } from './Pages/uteis/footer-page/footer-page.component';
+import { CadComplementoComponent } from './Pages/cadastro/uteis/cad-complemento/cad-complemento.component';
+import { CadService } from './services/operations/cad.service';
+import { LoginService } from './services/operations/login.service';
+import { UserService } from './services/operations/user.service';
+import { LocalStorageService } from './services/operations/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +33,10 @@ import { TelatesteComponent } from './Pages/telateste/telateste.component';
     HomeNavBarComponent,
     BoxContentComponent,
     MainContentComponent,
-    TelatesteComponent
+    TelatesteComponent,
+    CadMenuComponent,
+    FooterPageComponent,
+    CadComplementoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,12 @@ import { TelatesteComponent } from './Pages/telateste/telateste.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    CadService,
+    LoginService,
+    UserService,
+    LocalStorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

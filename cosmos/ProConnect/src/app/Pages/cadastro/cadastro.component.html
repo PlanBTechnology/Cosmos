@@ -1,2 +1,17 @@
-<app-pincipal-nav-bar></app-pincipal-nav-bar>
-<p>cadastro works!</p>
+<header>
+  <app-pincipal-nav-bar></app-pincipal-nav-bar>
+</header>
+<body>
+  <div class="container" >
+    <img *ngIf="etapaCadastro"
+      style="border-radius: 540px; margin-top: 70px; margin-left: 70px"
+      src="../../../assets/logo.png"
+    />
+    <div style="width: 600px; height: calc(100% - 70px)" *ngIf="etapaCadastro">
+      <app-cad-menu (continuaCada)="proximoPassao($event)"></app-cad-menu>
+    </div>
+    <div *ngIf="!etapaCadastro" style="width: 1250px; height: calc(100% - 70px);justify-self: center; margin-top: 20px;">
+      <app-cad-complemento></app-cad-complemento>
+    </div>
+  </div>
+</body>

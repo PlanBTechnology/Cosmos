@@ -17,7 +17,8 @@ public class Person implements IPerson {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column
+    private Long id;
 
     /**
      * Propriedade Nome
@@ -42,37 +43,40 @@ public class Person implements IPerson {
     /**
      * Propriedaade chave estrangeira Endereco que liga a tabela Endereco
      */
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
-    private Address adress;
+    private Address address;
 
     /**
      * Propriedade Genero
      */
-    private String gender;
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "gender")
+    private Gender gender;
 
     /**
      * Propriedade Estado Civil
      */
-    private String maritalStatus;
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "marital_status")
+    private MaritalStatus maritalStatus;
 
     /**
      * Propriedade Escolaridade
      */
-    private String escolarity;
-
-    /**
-     * Propriedade Email
-     */
-    private String email;
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "scholarity")
+    private Scholarity scholarity;
 
 
-    /**
-     * Metodo que pega o Nome da Pessoa
-     *
-     * @return {@code String}
-     */
-    @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -154,7 +158,7 @@ public class Person implements IPerson {
      */
     @Override
     public Address getAdress() {
-        return this.adress;
+        return this.address;
     }
 
     /**
@@ -164,7 +168,7 @@ public class Person implements IPerson {
      */
     @Override
     public void setAdress(Address adress) {
-        this.adress = adress;
+        this.address = adress;
     }
 
     /**
@@ -173,7 +177,7 @@ public class Person implements IPerson {
      * @return {@code String} o genero da entidade
      */
     @Override
-    public String getGender() {
+    public Gender getGender() {
         return this.gender;
     }
 
@@ -183,7 +187,7 @@ public class Person implements IPerson {
      * @param gender string a ser inserida na entidade
      */
     @Override
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -193,7 +197,7 @@ public class Person implements IPerson {
      * @return {@code String} o estado civil da pessoa
      */
     @Override
-    public String getMaritalStatus() {
+    public MaritalStatus getMaritalStatus() {
        return this.maritalStatus;
     }
 
@@ -203,7 +207,7 @@ public class Person implements IPerson {
      * @param maritalStatus o estado a ser inserido
      */
     @Override
-    public void setMaritalStatus(String maritalStatus) {
+    public void setMaritalStatus(MaritalStatus maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
@@ -213,18 +217,18 @@ public class Person implements IPerson {
      * @return {@code String} o grau da escolaridade no objeto Pessoa
      */
     @Override
-    public String getEscolarity() {
-        return this.escolarity;
+    public Scholarity getScholarity() {
+        return this.scholarity;
     }
 
     /**
      * Metodo para inserir um grau de escolaridade na Pessoa
      *
-     * @param escolarity a ser inserida
+     * @param scholarity a ser inserida
      */
     @Override
-    public void setEscolarity(String escolarity) {
-        this.escolarity = escolarity;
+    public void setScholarity(Scholarity scholarity) {
+        this.scholarity = scholarity;
     }
 
     /**
@@ -232,20 +236,6 @@ public class Person implements IPerson {
      *
      * @return {@code String} o email
      */
-    @Override
-    public String getEmail() {
-        return this.email;
-    }
-
-    /**
-     * Metodo para inserir o email da Pessoa
-     *
-     * @param email o email a ser inserido
-     */
-    @Override
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     /**
      * Metodo toString para retornar as informacoes
@@ -259,11 +249,10 @@ public class Person implements IPerson {
                 ", birthDate=" + birthDate +
                 ", cpf='" + cpf + '\'' +
                 ", cellphone='" + cellphone + '\'' +
-                ", adress=" + adress +
+                ", adress=" + address.toString() +
                 ", gender='" + gender + '\'' +
                 ", maritalStatus='" + maritalStatus + '\'' +
-                ", escolarity='" + escolarity + '\'' +
-                ", email='" + email + '\'' +
+                ", escolarity='" + scholarity + '\'' +
                 '}';
     }
 }

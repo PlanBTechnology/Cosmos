@@ -1,6 +1,9 @@
+import { Pessoa } from "../Class/pessoa";
 export interface IUsuario {
 
   id:number,
-  email:string,
+  person:Pessoa,
   password:string
+  email:string;
+
 }

@@ -1,6 +1,9 @@
 package com.planbtech.cosmos.model.Interfaces;
 
 import com.planbtech.cosmos.model.entites.Address;
+import com.planbtech.cosmos.model.entites.Gender;
+import com.planbtech.cosmos.model.entites.MaritalStatus;
+import com.planbtech.cosmos.model.entites.Scholarity;
 
 import java.time.LocalDate;
 
@@ -86,62 +89,50 @@ public interface IPerson {
      *
      * @return {@code String} o genero da entidade
      */
-    String getGender();
+    Gender getGender();
 
     /**
      * Metodo para inserir o genero do objeto pessoa
      *
      * @param gender string a ser inserida na entidade
      */
-    void setGender(String gender);
+    void setGender(Gender gender);
 
     /**
      * Metodo para pegar o estado civil do objeto pessoa
      *
      * @return {@code String} o estado civil da pessoa
      */
-    String getMaritalStatus();
+    MaritalStatus getMaritalStatus();
 
     /**
      * Metodo para inserir um estado civil do objeto Pessoa
      *
      * @param maritalStatus o estado a ser inserido
      */
-    void setMaritalStatus(String maritalStatus);
+    void setMaritalStatus(MaritalStatus maritalStatus);
 
     /**
      * Metodo para pegar a escolaridade do objeto Pessoa
      *
      * @return {@code String} o grau da escolaridade no objeto Pessoa
      */
-    String getEscolarity();
+    Scholarity getScholarity();
 
     /**
      * Metodo para inserir um grau de escolaridade no objeto Pessoa
      *
-     * @param escolarity a ser inserida
+     * @param scholarity a ser inserida
      */
-    void setEscolarity(String escolarity);
+    void setScholarity(Scholarity scholarity);
 
-    /**
-     * Metodo para pegar o email do objeto Pessoa
-     *
-     * @return {@code String} o email no objeto pessoa
-     */
-    String getEmail();
 
-    /**
-     * Metodo para inserir o email no objeto Pessoa
-     *
-     * @param email o email a ser inserido
-     */
-    void setEmail(String email);
+/**
+ * Metodo toString para retornar as informações
+ *
+ * @return informacoes do objeto como uma String
+ */
 
-    /**
-     * Metodo toString para retornar as informações
-     *
-     * @return informacoes do objeto como uma String
-     */
     String toString();
 
 }

@@ -17,7 +17,7 @@ public class Abilitie implements IAbilitie {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int code;
+    private Long code;
 
     /**
      * Propriedade para representar o nome dahabilidade
@@ -43,8 +43,8 @@ public class Abilitie implements IAbilitie {
      * @return {@code int }o codigo da habilidade
      */
     @Override
-    public int getCode() {
-        return 0;
+    public Long getCode() {
+        return this.code;
     }
 
     /**
@@ -53,8 +53,8 @@ public class Abilitie implements IAbilitie {
      * @param code recebe o codigo a ser inserido
      */
     @Override
-    public void setCode(int code) {
-
+    public void setCode(Long code) {
+        this.code = code;
     }
 
     /**

@@ -11,14 +11,14 @@ public interface IAbilitie {
      *
      * @return {@code int }o codigo da habilidade
      */
-    public int getCode();
+    public Long getCode();
 
     /**
      * Metodo para criar ou alterar o codigo da habilidade
      *
      * @param code recebe o codigo a ser inserido
      */
-    public void setCode(int code);
+    public void setCode(Long code);
 
     /**
      * Metodo para pegar o nome da habilidade

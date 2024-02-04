@@ -12,11 +12,22 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   email: string = "";
   senha: string = "";
-
+  id: number = 1;
 
   constructor(private http: HttpClient, private router: Router){}
   ngOnInit(): void{}
 
+  pegaInfo(){
+    var variavel;
+
+    const url  = `http://localhost:8080/user/${this.id}`
+
+    variavel = this.http.get<user[]>(url).subscribe(
+      (response: user[]) => {
+        console.log(response);
+      }
+    )
+  }
   verificarUsuario(){
     window.alert('Verificando dados do usuário...');
     var variavel;
@@ -65,5 +76,11 @@ export class LoginComponent {
 class usuario{
   email: string = "";
   senha: string = "";
+}
+
+class user {
+  id: number = 0;
+  personId: number = 0;
+  password: string = "";
 }
 // Email: test@gmail.com  Senha: Senha#

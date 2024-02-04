@@ -36,4 +36,18 @@ public interface IUser {
      */
     public void setPassword(String password);
 
+    /**
+     * Metodo para pegar o email do objeto Usuario
+     *
+     * @return {@code String} o email no objeto Usuario
+     */
+    String getEmail();
+
+    /**
+     * Metodo para inserir o email no objeto Usuario
+     *
+     * @param email o email a ser inserido
+     */
+    void setEmail(String email);
+
 }

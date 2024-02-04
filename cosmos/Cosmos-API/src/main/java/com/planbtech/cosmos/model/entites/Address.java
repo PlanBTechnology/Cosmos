@@ -1,11 +1,8 @@
 package com.planbtech.cosmos.model.entites;
 
 import com.planbtech.cosmos.model.Interfaces.IAddress;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
+import org.hibernate.annotations.Cascade;
 
 
 /**
@@ -33,7 +30,9 @@ public class Address implements IAddress {
     /**
      * Propriedade Estado
      */
-    private String state;
+    @JoinColumn(name="state")
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private State state;
 
     /**
      * Propriedade CEP
@@ -72,7 +71,7 @@ public class Address implements IAddress {
      * @return {@code String} o estado
      */
     @Override
-    public String getState() {
+    public State getState() {
         return this.state;
     }
 
@@ -121,7 +120,7 @@ public class Address implements IAddress {
      * @param state String a ser inserida
      */
     @Override
-    public void setState(String state) {
+    public void setState(State state) {
         this.state = state;
     }
 

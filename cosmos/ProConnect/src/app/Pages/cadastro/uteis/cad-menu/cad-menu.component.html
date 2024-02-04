@@ -1,0 +1,31 @@
+<div class="cad-menu">
+  <div class="titlebox">
+    <h1 class="title">
+      Cadastro (1/2)
+    </h1>
+    <p class="subtitle">
+      Realize o cadastro preenchendo os dados abaixo
+    </p>
+  </div>
+  <div class="form">
+    <div class="inputs">
+      <label for="" class="label" >Email</label>
+      <input type="text" class="campos" [(ngModel)]="user.email">
+    </div>
+    <div class="inputs">
+      <label for="" class="label" >Senha</label>
+      <input type="password" class="campos" [(ngModel)]="user.password">
+    </div>
+    <div class="inputs">
+      <label for="" class="label">Confirme a senha</label>
+      <input type="password" class="campos" [(ngModel)]="verificaSenha">
+    </div>
+    <div class="inputs" style="margin-bottom: 10px;">
+      <input   (click)="passaCad()"   type="button" value="Cadastrar" class="campos" style="background-color: #5201A4; color: #FFF;">
+    </div>
+  </div>
+  <div class="login">
+    <h2>Já possui uma conta?</h2>
+    <a routerLink="/login" class="LinkLogin">Login</a>
+  </div>
+</div>

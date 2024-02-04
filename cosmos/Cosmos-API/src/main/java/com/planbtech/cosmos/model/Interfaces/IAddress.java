@@ -1,5 +1,7 @@
 package com.planbtech.cosmos.model.Interfaces;
 
+import com.planbtech.cosmos.model.entites.State;
+
 /**
  * Interfac de molde para a entidade Address
  */
@@ -26,7 +28,7 @@ public interface IAddress {
      *
      * @return {@code String} o estado
      */
-    public String getState();
+    public State getState();
 
     /**
      * Metodo que pega o CEP que compoe a entidade Endereco
@@ -60,7 +62,7 @@ public interface IAddress {
      *
      * @param state String a ser inserida
      */
-    public void setState(String state);
+    public void setState(State state);
 
     /**
      * Metodo para inserir o CEP da entidade

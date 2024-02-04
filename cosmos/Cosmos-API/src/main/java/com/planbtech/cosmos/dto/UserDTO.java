@@ -19,8 +19,9 @@ public class UserDTO {
     /**
      * Propriedade Pessoa vinculada
      */
-    private Person pessoa;
+    private Person person;
 
+    private String email;
     /**
      * Propriedade senha
      */
@@ -86,16 +87,24 @@ public class UserDTO {
      *
      * @return {@code Person} que o usuario esta lidado
      */
-    public Person getPessoa() {
-        return pessoa;
+    public Person getPerson() {
+        return person;
     }
 
     /**
      * Metodo para vincularum uma pessoa ao usuario
      *
-     * @param pessoa a pessoa aser vinculada
+     * @param person a pessoa aser vinculada
      */
-    public void setPessoa(Person pessoa) {
-        this.pessoa = pessoa;
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

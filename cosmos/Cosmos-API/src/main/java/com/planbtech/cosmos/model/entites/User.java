@@ -2,6 +2,7 @@ package com.planbtech.cosmos.model.entites;
 
 import com.planbtech.cosmos.model.Interfaces.IUser;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * Entidade Usuario para representar a tabela Usuarios no banco de dados
@@ -15,19 +16,26 @@ public class User implements IUser {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Long id;
 
     /**
      * Propriedade Chave estrangeira que liga a tabela Pessoas
      */
-    @OneToOne
-    @JoinColumn(name = "pessoa_id")
-    private Person pessoa;
+    @NotNull(message = "Pessoa nao pode ser nula")
+    @JoinColumn
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, targetEntity = Person.class, orphanRemoval = true)
+    private Person person;
 
     /**
      * Propiedade Senha
      */
     private String password;
+
+    private String email;
+
+    public User() {
+    }
 
     /**
      * Metodo para pegar a Pessoa ao qual o Usuario esta ligado
@@ -36,7 +44,7 @@ public class User implements IUser {
      */
     @Override
     public Person getPerson() {
-        return null;
+        return person;
     }
 
     /**
@@ -52,11 +60,11 @@ public class User implements IUser {
     /**
      * Metodo para vincularum uma pessoa ao usuario
      *
-     * @param pessoa a pessoa aser vinculada
+     * @param person a pessoa aser vinculada
      */
     @Override
-    public void setPerson(Person pessoa) {
-
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
 
@@ -68,6 +76,16 @@ public class User implements IUser {
     @Override
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 

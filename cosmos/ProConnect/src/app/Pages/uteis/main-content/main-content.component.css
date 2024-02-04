@@ -9,39 +9,47 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .main-titulo{
   flex-direction: column;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .h2Titulo{
-
+  display: flex;
+  justify-content: center;
 }
 
 .h1Titulo{
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 100px;
   line-height: 70px;
   display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: -0.08em;
+  justify-content: center;
+  padding: 20px;
+  width: 350px;
 }
 
 .post{
-  border: 1px solid #B7B1BD;
+  border: 1px solid #000;
   background-color: #C5E5EC;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .identidade{
   display: flex;
   flex-direction: row;
+}
+
+.feed{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

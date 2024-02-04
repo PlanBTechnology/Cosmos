@@ -1,0 +1,16 @@
+
+body{
+  background-color: #38B5D0;
+  height: calc(100% - 50px);
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
