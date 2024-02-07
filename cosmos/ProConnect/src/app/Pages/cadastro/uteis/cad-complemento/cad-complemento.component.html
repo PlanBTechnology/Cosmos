@@ -50,33 +50,11 @@
       </div>
       <div class="informations">
         <label for="">Estado:</label>
-        <select name="" id="" [ngModel]="user.person.address.state" class="field">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
+        <select name="State" id="" class="field" [(ngModel)]="user.person.address.state" placeholder="teste">
+          <option [ngValue]="placeholder" hidden selected disabled>Escolha o Estado</option>
+          <option *ngFor="let state of stateDrop" [ngValue]="state">
+            {{state.stateName}}
+          </option>
         </select>
       </div>
     </div>
@@ -184,7 +162,7 @@
       >
     </div>
     <div style="margin-top: 15px;">
-      <input type="button" value="Cadastrar" class="cadButton">
+      <input type="button" value="Cadastrar" class="cadButton" (click)="showState()">
     </div>
   </div>
 </div>

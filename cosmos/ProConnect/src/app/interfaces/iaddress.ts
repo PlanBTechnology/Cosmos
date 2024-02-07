@@ -1,5 +1,7 @@
+import { State } from "../Class/state";
+
 export interface IAddress {
-  state:string;
+  state:State;
   city:string;
   street:string;
   CEP:string;

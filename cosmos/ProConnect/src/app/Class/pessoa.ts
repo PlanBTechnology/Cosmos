@@ -1,5 +1,8 @@
 import { IPessoa } from "../interfaces/ipessoa";
 import { Address } from "./address";
+import { Gender } from "./gender";
+import { Maritalstatus } from "./maritalstatus";
+import { Scholarity } from "./scholarity";
 
 export class Pessoa implements IPessoa{
   name: string;
@@ -7,9 +10,9 @@ export class Pessoa implements IPessoa{
   CPF: string;
   cellphone: string;
   address: Address;
-  gender: string;
-  matrialStatus: string;
-  scolarity: string;
+  gender: Gender;
+  matrialStatus: Maritalstatus;
+  scolarity: Scholarity;
 
 constructor(){
   this.address = new Address();
@@ -17,9 +20,9 @@ constructor(){
   this.birthDate = new Date();
   this.CPF = "";
   this.cellphone = "";
-  this.gender = "";
-  this.matrialStatus = "";
-  this.scolarity = "";
+  this.gender = new Gender();
+  this.matrialStatus = new Maritalstatus();
+  this.scolarity = new Scholarity();
 
 }
 

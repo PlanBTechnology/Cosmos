@@ -1,8 +1,7 @@
 package com.planbtech.cosmos.controller;
 
-
-import com.planbtech.cosmos.dto.StateDTO;
-import com.planbtech.cosmos.services.IStateServices;
+import com.planbtech.cosmos.dto.GenderDTO;
+import com.planbtech.cosmos.services.IGenderServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,17 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/state")
+@RequestMapping(value = "/gender")
 @CrossOrigin(origins = "http://localhost:4200")
-public class StateContoller {
+public class GenderController {
 
     @Autowired
-    private IStateServices istateServices;
+    private IGenderServices igenderServices;
 
     @GetMapping("/all")
-    public ResponseEntity<List<StateDTO>> findAll()
+    public ResponseEntity<List<GenderDTO>> findAll()
     {
-        var list = istateServices.findAll();
+        var list = igenderServices.findAll();
         return ResponseEntity.ok(list);
     }
 }

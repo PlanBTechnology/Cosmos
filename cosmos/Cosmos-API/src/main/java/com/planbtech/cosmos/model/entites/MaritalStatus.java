@@ -25,12 +25,12 @@ public class MaritalStatus implements IMartialStatus {
     }
 
     @Override
-    public String getMatrialStatus() {
+    public String getMaritalStatus() {
         return null;
     }
 
     @Override
-    public void setMatrialStatus(String matrialStatus) {
+    public void setMaritalStatus(String matrialStatus) {
 
     }
 }

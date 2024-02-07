@@ -1,14 +1,15 @@
 import { IAddress } from "../interfaces/iaddress";
+import { State } from "./state";
 
 export class Address implements IAddress{
-  state: string;
+  state: State;
   city: string;
   street: string;
   CEP: string;
   number: number;
 
   constructor(){
-    this.state = "";
+    this.state = new State();
     this.city = "";
     this.street = "";
     this.CEP = "";

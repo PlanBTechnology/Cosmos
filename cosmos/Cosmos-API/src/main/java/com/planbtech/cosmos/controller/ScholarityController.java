@@ -1,8 +1,7 @@
 package com.planbtech.cosmos.controller;
 
-
-import com.planbtech.cosmos.dto.StateDTO;
-import com.planbtech.cosmos.services.IStateServices;
+import com.planbtech.cosmos.dto.ScholarityDTO;
+import com.planbtech.cosmos.services.IScholarityServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,17 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/state")
+@RequestMapping(value = "/scholarity")
 @CrossOrigin(origins = "http://localhost:4200")
-public class StateContoller {
+public class ScholarityController {
 
     @Autowired
-    private IStateServices istateServices;
+    public IScholarityServices ischolarityServices;
 
     @GetMapping("/all")
-    public ResponseEntity<List<StateDTO>> findAll()
+    public ResponseEntity<List<ScholarityDTO>> findAll()
     {
-        var list = istateServices.findAll();
+        var list = ischolarityServices.findAll();
         return ResponseEntity.ok(list);
     }
+
 }

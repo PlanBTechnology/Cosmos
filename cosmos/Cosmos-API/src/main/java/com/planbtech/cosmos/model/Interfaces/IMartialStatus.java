@@ -6,7 +6,7 @@ public interface IMartialStatus {
 
     public void setId(Long id);
 
-    public String getMatrialStatus();
+    public String getMaritalStatus();
 
-    public void setMatrialStatus(String matrialStatus);
+    public void setMaritalStatus(String matrialStatus);
 }

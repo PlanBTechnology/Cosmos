@@ -1,6 +1,5 @@
 package com.planbtech.cosmos.dto;
 
-import com.planbtech.cosmos.model.entites.Person;
 import com.planbtech.cosmos.model.entites.State;
 import org.springframework.beans.BeanUtils;
 
