@@ -10,6 +10,6 @@ export interface IPessoa {
   cellphone:string;
   address:Address;
   gender:Gender;
-  matrialStatus:Maritalstatus;
-  scolarity:Scholarity;
+  maritalStatus:Maritalstatus;
+  scholarity:Scholarity;
 }

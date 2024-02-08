@@ -50,8 +50,8 @@
       </div>
       <div class="informations">
         <label for="">Estado:</label>
-        <select name="State" id="" class="field" [(ngModel)]="user.person.address.state" placeholder="teste">
-          <option [ngValue]="placeholder" hidden selected disabled>Escolha o Estado</option>
+        <select name="State" id="" style="width: 135px;" class="field" [(ngModel)]="user.person.address.state" placeholder="teste">
+          <option [ngValue]="placeholderState" hidden selected disabled>Escolha o Estado</option>
           <option *ngFor="let state of stateDrop" [ngValue]="state">
             {{state.stateName}}
           </option>
@@ -61,36 +61,31 @@
     <div class="row" style="margin-top: 15px;">
       <div class="informations" style="margin-right: 7px;">
         <label for="Gender" >Gênero:</label>
-        <select name="Gender" id="Gender" class="field">
-          <option value="Famale">Feminino</option>
-          <option value="Male">Masculino</option>
-          <option value="Not">Prefiro não responder</option>
+        <select name="Gender" [(ngModel)]="user.person.gender" class="field">
+          <option [ngValue]="placeholderGender" selected disabled >Escolha o Genêro</option>
+          <option *ngFor="let gender of genderDrop;"  [ngValue]="gender">
+            {{gender.gender}}
+          </option>
         </select>
       </div>
       <div class="informations">
         <label for="MatrialStatus">Estado Civil</label>
-        <select name="MatrialStatus" id="MatrialStatus" class="field">
-          <option value="Single">Solteiro(a)</option>
-          <option value="Married">Casado(a)</option>
-          <option value="Divorcied">Divorciado(a)</option>
-          <option value="Widowed">Viúvo(a)</option>
+        <select style="width: 150px;" name="MatrialStatus" [(ngModel)]="user.person.maritalStatus" id="MatrialStatus" class="field">
+          <option [ngValue]="placeholderMaritalStatus">Escolha Estado Civil</option>
+          <option *ngFor="let maritalStatus of maritalStatusDrop" [ngValue]="maritalStatus">
+            {{maritalStatus.maritalStatus}}
+          </option>
         </select>
       </div>
     </div>
     <div class="row" style="margin-top: 15px;">
       <div class="informations">
         <label for="">Escolaridade</label>
-        <select name="Education" id="" class="field" style="width: 500px;">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
+        <select name="Education" [(ngModel)]="user.person.scholarity" id="" class="field" style="width: 500px;">
+          <option [ngValue]="placeholderScholarity">Escolha a Escolaridade</option>
+          <option *ngFor="let scholarity of scholarityDrop" ngValue="scholarity">
+            {{scholarity.scholarity}}
+          </option>
         </select>
       </div>
     </div>

@@ -1,3 +1,4 @@
 export interface Imaritalstatus {
-  maritalstatus:string;
+  maritalStatus:string;
+  id:number;
 }

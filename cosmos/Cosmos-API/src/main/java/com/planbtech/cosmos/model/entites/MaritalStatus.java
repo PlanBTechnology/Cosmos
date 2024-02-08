@@ -16,21 +16,21 @@ public class MaritalStatus implements IMartialStatus {
 
     @Override
     public Long getId() {
-        return null;
+        return this.id;
     }
 
     @Override
     public void setId(Long id) {
-
+        this.id = id;
     }
 
     @Override
     public String getMaritalStatus() {
-        return null;
+        return this.maritalStatus;
     }
 
     @Override
     public void setMaritalStatus(String matrialStatus) {
-
+        this.maritalStatus = matrialStatus;
     }
 }

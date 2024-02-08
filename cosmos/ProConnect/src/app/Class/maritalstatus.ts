@@ -1,8 +1,10 @@
 import { Imaritalstatus } from "../interfaces/imaritalstatus";
 
 export class Maritalstatus implements Imaritalstatus{
-  maritalstatus: string;
+  maritalStatus: string;
+  id: number;
   constructor(){
-    this.maritalstatus = "";
+    this.id = 0;
+    this.maritalStatus = "";
   }
 }

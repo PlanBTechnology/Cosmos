@@ -6,8 +6,8 @@ export class User implements IUsuario{
 
 
   constructor(){
-    this.id = 0;
-    this.person = new Pessoa();
+    this.id =  0;
+    this.person = null ||new Pessoa();
     this.password = "";
     this.email = "";
   }

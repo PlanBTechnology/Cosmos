@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/matital-status")
+@RequestMapping("/marital-status")
 @CrossOrigin(origins = "http://localhost:4200")
 public class MaritalStatusController {
 

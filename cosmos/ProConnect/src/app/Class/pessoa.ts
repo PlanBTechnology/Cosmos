@@ -11,8 +11,8 @@ export class Pessoa implements IPessoa{
   cellphone: string;
   address: Address;
   gender: Gender;
-  matrialStatus: Maritalstatus;
-  scolarity: Scholarity;
+  maritalStatus: Maritalstatus;
+  scholarity: Scholarity;
 
 constructor(){
   this.address = new Address();
@@ -21,8 +21,8 @@ constructor(){
   this.CPF = "";
   this.cellphone = "";
   this.gender = new Gender();
-  this.matrialStatus = new Maritalstatus();
-  this.scolarity = new Scholarity();
+  this.maritalStatus = new Maritalstatus();
+  this.scholarity = new Scholarity();
 
 }
 
