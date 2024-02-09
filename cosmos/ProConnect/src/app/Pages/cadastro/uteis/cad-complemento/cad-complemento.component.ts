@@ -7,7 +7,7 @@ import { State } from 'src/app/Class/state';
 import { Gender } from 'src/app/Class/gender';
 import { Scholarity } from 'src/app/Class/scholarity';
 import { Maritalstatus } from 'src/app/Class/maritalstatus';
-import { empty } from 'rxjs';
+
 @Component({
   selector: 'app-cad-complemento',
   templateUrl: './cad-complemento.component.html',
@@ -19,26 +19,31 @@ export class CadComplementoComponent implements OnInit{
   genderDrop:Gender[] = [];
   scholarityDrop:Scholarity[]=[];
   maritalStatusDrop:Maritalstatus[]=[];
+  selectedState = null;
+  selectedGender = null;
+  selectedScholarity = null;
+  selectedMaritalStatus = null;
+  phoneNumber = 0;
+  userName = ''
+  userBirthDate = null;
+  userCPF = '';
+  userCEP = '';
 
-  placeholderState:any;
-  placeholderScholarity:any;
-  placeholderMaritalStatus:any;
-  placeholderGender:any;
+
   constructor(
     private storageService:LocalStorageService,
     private cadService:CadService,
     private confService:ConfigGeralServicesService){}
   ngOnInit(): void {
-    this.placeholderState = this.user.person.address.state;
-    this.placeholderScholarity = this.user.person.scholarity;
-    this.placeholderMaritalStatus = this.user.person.maritalStatus;
-    this.placeholderGender = this.user.person.gender;
     this.stateDrop = this.confService.buildStateDrop();
     this.genderDrop = this.confService.buildGenderDrop();
     this.scholarityDrop = this.confService.buildScholarityDrop();
     this.maritalStatusDrop = this.confService.buildMaritalStatusDrop();
   }
   showState(){
-    console.log(this.user.person.address.state);
+    console.log(this.selectedState);
+    console.log(this.userCEP);
   }
+
+
 }

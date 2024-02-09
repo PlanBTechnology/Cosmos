@@ -3,9 +3,9 @@ state_id bigint primary key auto_increment,
 state varchar(2)
 );
 
-create table matrialstatus(
-matrialStatus_id bigint primary key auto_increment,
-matrialStatus varchar(15) 
+create table maritalstatus(
+maritalStatus_id bigint primary key auto_increment,
+maritalStatus varchar(15) 
 );
 
 create table scholarity(

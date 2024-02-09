@@ -21,6 +21,9 @@ import { CadService } from './services/operations/cad.service';
 import { LoginService } from './services/operations/login.service';
 import { UserService } from './services/operations/user.service';
 import { LocalStorageService } from './services/operations/local-storage.service';
+import { PhonePipe } from './services/pipelines/phone.pipe';
+import { CpfPipe } from './services/pipelines/cpf.pipe';
+import { CEPPipe } from './services/pipelines/cep.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { LocalStorageService } from './services/operations/local-storage.service
     TelatesteComponent,
     CadMenuComponent,
     FooterPageComponent,
-    CadComplementoComponent
+    CadComplementoComponent,
+    PhonePipe,
+    CpfPipe,
+    CEPPipe
   ],
   imports: [
     BrowserModule,

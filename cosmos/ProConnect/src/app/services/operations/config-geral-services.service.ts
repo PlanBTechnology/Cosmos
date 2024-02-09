@@ -16,12 +16,7 @@ export class ConfigGeralServicesService {
     const url = `http://localhost:8080/state/all`
     this.http.get<State[]>(url).subscribe(
       (Response:State[]) => {
-        for (let key in Response){
-          let s = new State();
-          s.stateName = Response[key].stateName;
-          s.id = Response[key].id;
-          stateList.push(s);
-        }
+          stateList.push(...Response);
       }
     );
     return stateList;
@@ -37,6 +32,7 @@ export class ConfigGeralServicesService {
     );
     return genderList;
   }
+
   buildScholarityDrop():Scholarity[]{
     const scholarityList:Scholarity[] = [];
     const url = `http://localhost:8080/scholarity/all`
