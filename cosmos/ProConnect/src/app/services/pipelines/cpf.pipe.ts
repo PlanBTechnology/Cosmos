@@ -8,7 +8,7 @@ export class CpfPipe implements PipeTransform {
 
         let valorFormatado = value + '';
         if (valorFormatado == '' || valorFormatado.length < 11) {
-          return '';
+          return valorFormatado;
         }
         valorFormatado = valorFormatado
             .padStart(11, '0')
@@ -18,7 +18,6 @@ export class CpfPipe implements PipeTransform {
                 /(\d{3})(\d{3})(\d{3})(\d{2})/,
                 '$1.$2.$3-$4'
             );
-
         if (ocultarAlgunsValores) {
             valorFormatado =
                 'XXX.' + valorFormatado.substr(4, 7) + '-XX';

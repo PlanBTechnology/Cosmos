@@ -7,27 +7,27 @@
     <div class="row">
       <div class="informations" style="margin-right: 7px;">
         <label for="">Nome:</label>
-        <input type="text" class="field" style="width: 300px;" [ngModel]="userName"/>
+        <input type="text" class="field" style="width: 300px;" [ngModel]="user.person.name"/>
       </div>
       <div class="informations">
         <label for="">Data de Nascimento:</label>
-        <input type="date" name="" id="" [ngModel]="userBirthDate" class="field" />
+        <input type="date" name="" id="" [ngModel]="user.person.birthDate" class="field" />
       </div>
     </div>
     <div class="row" style="margin-top: 15px;">
       <div class="informations" style="margin-right: 7px;">
         <label for="">Seu CPF:</label>
-        <input type="text" (ngModelChange)="userCPF=$event" [ngModel]="userCPF | cpf" class="field" />
+        <input type="text" maxlength="14" onkeypress='return event.charCode >= 48 && event.charCode <= 57' (ngModelChange)="user.person.CPF=$event" [ngModel]="user.person.CPF | cpf" class="field" />
       </div>
       <div class="informations">
         <label for="">Número de Celular (WhatsApp:)</label>
-        <input type="text" (ngModelChange)="phoneNumber=$event" [ngModel]="phoneNumber | phone" class="field" />
+        <input onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" (ngModelChange)="user.person.cellphone=$event" [ngModel]="user.person.cellphone | phone" class="field" />
       </div>
     </div>
     <div class="row" style="margin-top: 15px;">
       <div class="informations" style="margin-right: 7px;">
         <label for="">CEP</label>
-        <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" (ngModelChange)="userCEP=$event" [ngModel]="userCEP | cep" class="field"/>
+        <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" (ngModelChange)="user.person.address.CEP=$event" [ngModel]="user.person.address.CEP | cep" class="field"/>
         <a
           href=""
           style="
@@ -46,7 +46,7 @@
     <div class="row" style="margin-top: 15px;">
       <div class="informations" style="margin-right: 7px;">
         <label for="">Número:</label>
-        <input type="text" [ngModel]="user.person.address.number" class="field" />
+        <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' [ngModel]="user.person.address.number == 0 ? '' : user.person.address.number" class="field" />
       </div>
       <div class="informations">
         <label for="">Estado:</label>
@@ -118,9 +118,9 @@
           <option value=""></option>
         </select>
       </div>
-      <div class="informations">
+      <div class="informations" style="margin-left: 70px;">
         <label for="">Pretensão Salarial:</label>
-        <input type="text" class="field"/>
+        <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="field"/>
       </div>
     </div>
     <div class="row" style="margin-top: 15px;">

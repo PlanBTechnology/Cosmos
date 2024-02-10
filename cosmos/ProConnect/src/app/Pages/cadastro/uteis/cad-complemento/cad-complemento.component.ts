@@ -23,12 +23,6 @@ export class CadComplementoComponent implements OnInit{
   selectedGender = null;
   selectedScholarity = null;
   selectedMaritalStatus = null;
-  phoneNumber = 0;
-  userName = ''
-  userBirthDate = null;
-  userCPF = '';
-  userCEP = '';
-
 
   constructor(
     private storageService:LocalStorageService,
@@ -42,7 +36,7 @@ export class CadComplementoComponent implements OnInit{
   }
   showState(){
     console.log(this.selectedState);
-    console.log(this.userCEP);
+    console.log(this.user.person.CPF);
   }
 
 
