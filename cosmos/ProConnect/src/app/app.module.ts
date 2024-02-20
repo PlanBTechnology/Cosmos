@@ -24,6 +24,7 @@ import { LocalStorageService } from './services/operations/local-storage.service
 import { PhonePipe } from './services/pipelines/phone.pipe';
 import { CpfPipe } from './services/pipelines/cpf.pipe';
 import { CEPPipe } from './services/pipelines/cep.pipe';
+import { MoneyPipe } from './services/pipelines/money.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CEPPipe } from './services/pipelines/cep.pipe';
     CadComplementoComponent,
     PhonePipe,
     CpfPipe,
-    CEPPipe
+    CEPPipe,
+    MoneyPipe
   ],
   imports: [
     BrowserModule,

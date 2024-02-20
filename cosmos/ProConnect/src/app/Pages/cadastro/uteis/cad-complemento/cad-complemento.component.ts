@@ -23,6 +23,8 @@ export class CadComplementoComponent implements OnInit{
   selectedGender = null;
   selectedScholarity = null;
   selectedMaritalStatus = null;
+  selectExperience = null;
+  selectJob = null;
 
   constructor(
     private storageService:LocalStorageService,
@@ -35,9 +37,19 @@ export class CadComplementoComponent implements OnInit{
     this.maritalStatusDrop = this.confService.buildMaritalStatusDrop();
   }
   showState(){
-    console.log(this.selectedState);
+    console.log(this.user.person.name);
+    console.log(this.user.person.birthDate);
     console.log(this.user.person.CPF);
+    console.log(this.user.person.cellphone);
+    console.log(this.user.person.address.CEP);
+    console.log(this.user.person.address.street)
+    console.log(this.user.person.address.number)
+    console.log(this.user.person.address.state)
+    console.log(this.user.person.address.city)
+    console.log(this.user.person.gender)
+    console.log(this.user.person.scholarity)
+    console.log(this.user.person.maritalStatus)
+    console.log(this.user.profile.profileconf.homeoffice);
+    console.log(this.user.profile.profileconf.working);
   }
-
-
 }

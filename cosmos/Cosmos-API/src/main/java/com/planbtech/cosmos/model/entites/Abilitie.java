@@ -17,6 +17,7 @@ public class Abilitie implements IAbilitie {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "code")
     private Long code;
 
     /**
@@ -64,7 +65,7 @@ public class Abilitie implements IAbilitie {
      */
     @Override
     public String getName() {
-        return null;
+        return this.name;
     }
 
     /**
@@ -74,7 +75,7 @@ public class Abilitie implements IAbilitie {
      */
     @Override
     public void setName(String name) {
-
+        this.name = name;
     }
 
     /**
@@ -84,7 +85,7 @@ public class Abilitie implements IAbilitie {
      */
     @Override
     public String getClassification() {
-        return null;
+        return this.classification;
     }
 
     /**
@@ -94,7 +95,7 @@ public class Abilitie implements IAbilitie {
      */
     @Override
     public void setClassification(String classification) {
-
+        this.classification = classification;
     }
 
     /**
@@ -104,7 +105,7 @@ public class Abilitie implements IAbilitie {
      */
     @Override
     public Double getPontuation() {
-        return null;
+        return this.pontuation;
     }
 
     /**
@@ -114,6 +115,6 @@ public class Abilitie implements IAbilitie {
      */
     @Override
     public void setPontuation(Double pontuation) {
-
+        this.pontuation = pontuation;
     }
 }

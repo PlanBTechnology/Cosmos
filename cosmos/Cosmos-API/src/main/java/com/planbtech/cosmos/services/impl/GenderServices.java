@@ -17,8 +17,6 @@ public class GenderServices implements IGenderServices {
 
     @Override
     public List<GenderDTO> findAll() {
-        List<Gender> genderDTOList = genderRepository.findAll();
-        List<GenderDTO> dto = genderDTOList.stream().map(GenderDTO::new).toList();
-        return dto;
+        return genderRepository.findAll().stream().map(GenderDTO::new).toList();
     }
 }

@@ -2,6 +2,7 @@ package com.planbtech.cosmos.model.Interfaces;
 
 
 import com.planbtech.cosmos.model.entites.Person;
+import com.planbtech.cosmos.model.entites.Profile;
 
 /**
  * Interface de Molde para a classe Usuario
@@ -49,5 +50,9 @@ public interface IUser {
      * @param email o email a ser inserido
      */
     void setEmail(String email);
+
+    public Profile getProfile();
+
+    public void setProfile(Profile profile);
 
 }

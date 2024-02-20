@@ -22,7 +22,6 @@ public class MaritalStatusController {
     @GetMapping("/all")
     public ResponseEntity<List<MaritalStatusDTO>> findAll()
     {
-        var list = iMaritalStatusServices.findAll();
-        return ResponseEntity.ok(list);
+        return ResponseEntity.ok(iMaritalStatusServices.findAll());
     }
 }

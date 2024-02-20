@@ -22,8 +22,7 @@ public class ScholarityController {
     @GetMapping("/all")
     public ResponseEntity<List<ScholarityDTO>> findAll()
     {
-        var list = ischolarityServices.findAll();
-        return ResponseEntity.ok(list);
+        return ResponseEntity.ok(ischolarityServices.findAll());
     }
 
 }

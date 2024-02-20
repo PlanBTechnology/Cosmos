@@ -42,9 +42,7 @@ public class UserServices implements IUserServices {
      */
     @Override
     public List<UserDTO> findAll() {
-        List<User> result = userRepository.findAll();
-        List<UserDTO> dto = result.stream().map(UserDTO::new).toList();
-        return dto;
+        return userRepository.findAll().stream().map(UserDTO::new).toList();
     }
 
     /**
@@ -59,8 +57,6 @@ public class UserServices implements IUserServices {
             throw new IllegalArgumentException("User already exists");
         }
         //Implementar metodos de verificação utilizando regex, para que as informações estejam dentro do padrão, como a senha, CPF
-
-
 
         return userRepository.save(userToCreate);
     }

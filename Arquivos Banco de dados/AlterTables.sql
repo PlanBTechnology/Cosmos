@@ -13,3 +13,6 @@ add foreign key (profileConf) references ProFileConf(profileConf_id);
 alter table persons
 add foreign key (gender) references gender(gender_id)
 on delete no action;
+
+alter table users
+add foreign key(profileId) references profiles(id);

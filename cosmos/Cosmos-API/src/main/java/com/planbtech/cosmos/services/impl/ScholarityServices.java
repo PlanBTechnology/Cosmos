@@ -18,8 +18,6 @@ public class ScholarityServices implements IScholarityServices {
 
     @Override
     public List<ScholarityDTO> findAll() {
-        List <Scholarity> result = Scholarityrepository.findAll();
-        List<ScholarityDTO> dto = result.stream().map(ScholarityDTO::new).toList();
-        return dto;
+        return Scholarityrepository.findAll().stream().map(ScholarityDTO::new).toList();
     }
 }

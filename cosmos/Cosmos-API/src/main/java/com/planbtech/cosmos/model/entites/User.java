@@ -27,6 +27,10 @@ public class User implements IUser {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, targetEntity = Person.class, orphanRemoval = true)
     private Person person;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "profileid")
+    private Profile profile;
+
     /**
      * Propiedade Senha
      */
@@ -67,6 +71,13 @@ public class User implements IUser {
         this.person = person;
     }
 
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
 
     /**
      * Metodo para inserir a senha do usuario

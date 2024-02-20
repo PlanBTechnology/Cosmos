@@ -1,8 +1,10 @@
 package com.planbtech.cosmos.model.Interfaces;
 
 import com.planbtech.cosmos.model.entites.Abilitie;
+import com.planbtech.cosmos.model.entites.ProfileConf;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Interface para moldar a classe Perfil
@@ -14,21 +16,27 @@ public interface IProfile {
      *
      * @return {@code int} o id do perfil
      */
-    public int getId();
+    public Long getId();
 
     /**
      * Metodo para inserir o Id no objeto Perfil
      *
      * @param id a ser inserido
      */
-    public void setId(int id);
+    public void setId(Long id);
 
     /**
      * Metodo para pegar a lista de habilidades do Perfil
      *
      * @return {*code ArrayList{Abilitie}} uma lista com as habilidades no Perfil
      */
-    public ArrayList<Abilitie> getAbilities();
+    public List<Abilitie> getAbilities();
+
+    public void setProfConf(ProfileConf profConf);
+
+    public ProfileConf getProfConf();
+
+
 
     /**
      * Metodo para inseri uma lista de habilidades no Perfil, metodo depreciado
@@ -36,5 +44,5 @@ public interface IProfile {
      * @param abilities a lista as ser inserida no objeto Perfil
      *
      */
-    public void setAbilities(ArrayList<Abilitie> abilities);
+    public void setAbilities(List<Abilitie> abilities);
 }

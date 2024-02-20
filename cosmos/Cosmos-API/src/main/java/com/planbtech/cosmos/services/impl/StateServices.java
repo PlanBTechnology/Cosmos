@@ -17,9 +17,7 @@ public class StateServices implements IStateServices {
 
     @Override
     public List<StateDTO> findAll() {
-        List<State> result = stateRepository.findAll();
-        List<StateDTO> dto = result.stream().map(StateDTO::new).toList();
-        return dto;
+        return stateRepository.findAll().stream().map(StateDTO::new).toList();
     }
 
 

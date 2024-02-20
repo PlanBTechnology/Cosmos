@@ -22,7 +22,6 @@ public class GenderController {
     @GetMapping("/all")
     public ResponseEntity<List<GenderDTO>> findAll()
     {
-        var list = igenderServices.findAll();
-        return ResponseEntity.ok(list);
+        return ResponseEntity.ok(igenderServices.findAll());
     }
 }

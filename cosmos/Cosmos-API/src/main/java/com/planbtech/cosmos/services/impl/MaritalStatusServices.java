@@ -17,8 +17,6 @@ public class MaritalStatusServices implements IMaritalStatusServices {
 
     @Override
     public List<MaritalStatusDTO> findAll() {
-        List<MaritalStatus> result = maritalStatusRepository.findAll();
-        List<MaritalStatusDTO> dto = result.stream().map(MaritalStatusDTO::new).toList();
-        return dto;
+        return maritalStatusRepository.findAll().stream().map(MaritalStatusDTO::new).toList();
     }
 }

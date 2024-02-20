@@ -42,9 +42,7 @@ public class UserController {
      */
     @GetMapping("/list")
     public ResponseEntity<List<UserDTO>> findAll() {
-       var list = iuserServices.findAll();
-
-       return ResponseEntity.ok(list);
+       return ResponseEntity.ok(iuserServices.findAll());
     }
 
     /**
@@ -56,7 +54,6 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserDTO> findById(@PathVariable Long id) {
         var user = iuserServices.findById(id);
-
         return ResponseEntity.ok(user);
     }
 

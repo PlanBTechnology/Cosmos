@@ -1,11 +1,8 @@
 package com.planbtech.cosmos.model.entites;
 
 import com.planbtech.cosmos.model.Interfaces.IProfile;
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
-
-import java.util.ArrayList;
+import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
@@ -19,12 +16,23 @@ public class Profile implements IProfile {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
+
+    @OneToOne
+    @JoinColumn(name="profileconf")
+    private ProfileConf profileConf;
+
+    @OneToMany
+    @JoinColumn(name="code")
+    private List<Abilitie> abilities;
+
+    @OneToMany
+    @JoinColumn(name="profileid")
+    private List<JobProfile> jobProfiles;
 
     /**
      * Propriedade de lista das habilidades
      */
-
 
     /**
      * Metodo para pegar o Id do Perfil
@@ -32,8 +40,8 @@ public class Profile implements IProfile {
      * @return {@code int} o id do perfil
      */
     @Override
-    public int getId() {
-        return 0;
+    public Long getId() {
+        return this.id;
     }
 
     /**
@@ -42,8 +50,8 @@ public class Profile implements IProfile {
      * @param id a ser inserido
      */
     @Override
-    public void setId(int id) {
-
+    public void setId(Long id) {
+        this.id = id;
     }
 
     /**
@@ -52,8 +60,18 @@ public class Profile implements IProfile {
      * @return {*code ArrayList{Abilitie}} uma lista com as habilidades no Perfil
      */
     @Override
-    public ArrayList<Abilitie> getAbilities() {
-        return null;
+    public List<Abilitie> getAbilities() {
+        return this.abilities;
+    }
+
+    @Override
+    public void setProfConf(ProfileConf profConf) {
+        this.profileConf = profConf;
+    }
+
+    @Override
+    public ProfileConf getProfConf() {
+        return this.profileConf;
     }
 
     /**
@@ -63,7 +81,7 @@ public class Profile implements IProfile {
      *
      */
     @Override
-    public void setAbilities(ArrayList<Abilitie> abilities) {
-
+    public void setAbilities(List<Abilitie> abilities) {
+        this.abilities = abilities;
     }
 }
