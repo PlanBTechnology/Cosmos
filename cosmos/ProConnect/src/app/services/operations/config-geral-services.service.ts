@@ -4,6 +4,8 @@ import { State } from 'src/app/Class/state';
 import { Gender } from 'src/app/Class/gender';
 import { Scholarity } from 'src/app/Class/scholarity';
 import { Maritalstatus } from 'src/app/Class/maritalstatus';
+import { Job } from 'src/app/Class/job';
+
 
 @Injectable({
   providedIn: 'root'
@@ -54,4 +56,16 @@ export class ConfigGeralServicesService {
     );
     return maritalStatusList;
   }
+
+  buildJobDrop():Job[]{
+    const jobList:Job[] = [];
+    const url = `http://localhost:8080/job/all`
+    this.http.get<Job[]>(url).subscribe(
+      (Response:Job[]) => {
+        jobList.push(...Response)
+      }
+    )
+    return jobList
+  }
 }
+

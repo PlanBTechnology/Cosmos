@@ -27,10 +27,9 @@ this.storageService.setData('user', User)
   }
 
   verificaSenha(senha:string):boolean{
-    console.log(this.getUser().password);
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9!@#\$%\^&\*\(\)_\+\-=\[\]\{\};:'",<>\./?\\|]).{6,}$/;
-    if(regex.test(this.getUser().password)){
-      if(this.getUser().password === senha){
+    if(regex.test(this.getUser().getPassword())){
+      if(this.getUser().getPassword() === senha){
         return true;
       }
       else{

@@ -7,7 +7,7 @@ import { LoginComponent } from './Pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { PagInicialComponent } from './Pages/pag-inicial/pag-inicial.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { PrincipalComponent } from './Pages/Pincipal/principal.component';
+import { PrincipalComponent } from './Pages/Principal/principal.component';
 import { PincipalNavBarComponent } from './Pages/uteis/pincipal-nav-bar/pincipal-nav-bar.component';
 import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { HomeNavBarComponent } from './Pages/uteis/home-nav-bar/home-nav-bar.component';
@@ -25,6 +25,7 @@ import { PhonePipe } from './services/pipelines/phone.pipe';
 import { CpfPipe } from './services/pipelines/cpf.pipe';
 import { CEPPipe } from './services/pipelines/cep.pipe';
 import { MoneyPipe } from './services/pipelines/money.pipe';
+import { SaveUrlPipe } from './services/pipelines/save-url.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MoneyPipe } from './services/pipelines/money.pipe';
     PhonePipe,
     CpfPipe,
     CEPPipe,
-    MoneyPipe
+    MoneyPipe,
+    SaveUrlPipe
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,13 @@
 import { IJob } from "../interfaces/ijob";
 
 export class Job implements IJob{
-  jobId: number;
-  jobName: string;
+  jobId: number = 0;
+  jobName: string = '';
 
-  constructor(){
-    this.jobId = 0;
-    this.jobName = "";
-  }
+
+  getJobId(): number { return this.jobId}
+  setJobId(jobId: number): void {this.jobId= jobId}
+
+  getJobName(): string {return this.jobName}
+  setJobName(jobName: string): void {this.jobName = jobName}
 }

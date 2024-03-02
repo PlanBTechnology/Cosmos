@@ -1,11 +1,26 @@
-import { Pessoa } from "../Class/pessoa";
-import { Profile } from "../Class/profile";
+import { IPerson } from "./iperson";
+import { Iprofile } from "./iprofile";
 export interface IUsuario {
 
-  id:number,
-  person:Pessoa,
-  password:string
-  email:string;
-  profile:Profile;
 
+  person:IPerson;
+  password:string;
+  email:string;
+  profile:Iprofile;
+  id:number;
+
+  getPerson():IPerson;
+  setPerson(person:IPerson):void;
+
+  getPassword():string;
+  setPassword(password:string):void;
+
+  getEmail():string;
+  setEmail(email:string):void;
+
+  getProfile():Iprofile;
+  setProfile(profile:Iprofile):void;
+
+  getId():number;
+  setId(id:number):void;
 }

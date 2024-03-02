@@ -1,4 +1,12 @@
 export interface Imaritalstatus {
-  maritalStatus:string;
+
+
   id:number;
+  maritalStatus:string;
+
+  getId():number;
+  setId(id:number):void;
+
+  getMaritalStatus():string;
+  setMaritalStatus(maritalStatus:string):void;
 }

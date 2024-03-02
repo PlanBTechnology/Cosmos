@@ -1,15 +1,22 @@
-import { Job } from "../Class/job";
-import { Profile } from "../Class/profile";
+import { IJob } from "./ijob";
+import { Iprofile } from "./iprofile";
 
 
 export interface Iprofilejobs {
- PkProfileJobs:PkProfilejobs
- experience:number
+
+  PKProfileJobs:PkProfilejobs
+  experience:number
+
+ getPKProfileJobs():PkProfilejobs
+ setPKProfileJobs(pkProfileJobs:PkProfilejobs):void
+
+ getExperience():number
+ setExperience(experience:number):void
 }
 
 export type PkProfilejobs ={
-  profileId:Profile
-  jobId:Job
+  profileId:Iprofile
+  jobId:IJob
 }
 
 

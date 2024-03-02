@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Pages/login/login.component';
-import { PrincipalComponent } from './Pages/Pincipal/principal.component';
+import { PrincipalComponent } from './Pages/Principal/principal.component';
 import { PagInicialComponent } from './Pages/pag-inicial/pag-inicial.component';
 import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { TelatesteComponent } from './Pages/telateste/telateste.component';

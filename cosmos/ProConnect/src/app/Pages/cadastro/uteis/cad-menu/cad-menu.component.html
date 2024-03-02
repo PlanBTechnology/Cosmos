@@ -10,11 +10,11 @@
   <div class="form">
     <div class="inputs">
       <label for="" class="label" >Email</label>
-      <input type="text" class="campos" [(ngModel)]="user.email">
+      <input type="text" class="campos" [ngModel]="user.getEmail()" (ngModelChange)="user.setEmail($event)" >
     </div>
     <div class="inputs">
       <label for="" class="label" >Senha</label>
-      <input type="password" class="campos" [(ngModel)]="user.password">
+      <input type="password" class="campos" [ngModel]="user.getPassword()" (ngModelChange)="user.setPassword($event)" >
     </div>
     <div class="inputs">
       <label for="" class="label">Confirme a senha</label>

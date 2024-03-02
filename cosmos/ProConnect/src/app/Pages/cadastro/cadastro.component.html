@@ -11,7 +11,7 @@
       <app-cad-menu (continuaCada)="proximoPassao($event)"></app-cad-menu>
     </div>
     <div *ngIf="!etapaCadastro" style="width: 1250px; height: calc(100% - 70px);justify-self: center; margin-top: 20px;">
-      <app-cad-complemento></app-cad-complemento>
+      <app-cad-complemento  [txte]="teste"></app-cad-complemento>
     </div>
   </div>
 </body>
