@@ -14,7 +14,7 @@ import { LocalStorageService } from 'src/app/services/operations/local-storage.s
   providers: [CadService, LocalStorageService]
 })
 export class CadastroComponent implements OnInit{
-  teste:string[] = ['tgbNymZ7vqY', '7t4fgC-_6dQ?si=2d224SgkDr71VbQo'];
+  teste:string[] = ['tgbNymZ7vqY', '0Y5kKMAkKjc'];
   constructor(private http:HttpClient, private storageService:LocalStorageService, cadService:CadService){}
   ngOnInit(): void {
 

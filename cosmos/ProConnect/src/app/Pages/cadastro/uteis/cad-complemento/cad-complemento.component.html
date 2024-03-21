@@ -1,15 +1,12 @@
 <div class="container">
-
-
     <div *ngFor="let txt of txte">
-      <iframe width="560" height="315"
-      [src]="'https://www.youtube.com/embed/{{txt}' | saveUrl"
-       title="YouTube video player" frameborder="0"
-       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-       allowfullscreen>
-      </iframe>
+      <youtube-player [videoId]="txt" [height]="250"[width]="500"></youtube-player>
     </div>
-  </div>
+    <div>
+      <youtube-player [videoId]="teste"></youtube-player>
+      <button (click)="changeExibition()" >teste</button>
+    </div>
+</div>
 
 
 

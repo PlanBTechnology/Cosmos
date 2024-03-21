@@ -46,7 +46,7 @@ public class UserController {
     }
 
     /**
-     * Metodo para buscar o usuario pelo id passado
+     * Metodo para buscar o usuario pelo 'id' passado
      *
      * @param id do usuario a ser buscado
      * @return {@code UserDTO} as informacoes do usuario buscado
@@ -65,7 +65,7 @@ public class UserController {
      */
     @PostMapping
     public ResponseEntity<UserDTO> create(@RequestBody User userToCreate) {
-
+        System.out.println(userToCreate.toString());
         UserDTO userCreated = new UserDTO(iuserServices.create(userToCreate));
         URI location = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/{id}")

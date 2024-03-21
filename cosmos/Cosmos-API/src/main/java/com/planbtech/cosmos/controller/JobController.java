@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/Job")
+@RequestMapping(value="/job")
 @CrossOrigin(origins = "http://localhost:4200")
 public class JobController {
 

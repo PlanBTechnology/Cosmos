@@ -117,4 +117,7 @@ public class Abilitie implements IAbilitie {
     public void setPontuation(Double pontuation) {
         this.pontuation = pontuation;
     }
+
+
+
 }

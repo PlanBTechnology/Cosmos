@@ -36,3 +36,25 @@ foreign key (ProfileId) references profiles(id) ,
 foreign key (JobId) references Job(Job_Id),
 JobExperience int
 );
+
+drop table projects;
+create table projects(
+ProjectId 		bigInt primary key auto_increment,
+Description		text,
+ProjectTitle	varchar(20),
+ProjectsImgId	bigInt,
+foreign key (ProjectsImgId) references projectimages(imageId)
+);
+
+create table projectImages(
+imageId			bigint primary key auto_increment,
+ProjectId		bigint,
+imgData			mediumblob
+);
+
+create table ProjectColaborates(
+ProjectId 		bigInt,
+ProfileId		bigint,
+foreign key (ProjectId) references projects(ProjectId),
+foreign key (ProfileId) references profiles(id)
+);

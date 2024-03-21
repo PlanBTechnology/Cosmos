@@ -36,7 +36,8 @@ export class CadComplementoComponent implements OnInit{
   selectExperience = null;
   selectJob = null;
 
-
+  teste='tgbNymZ7vqY'
+  exibition=true
   @Input() txte:string[] = [];
 
   constructor(
@@ -86,5 +87,16 @@ export class CadComplementoComponent implements OnInit{
     return new Date(parseInt(dateSplit[0]), parseInt(dateSplit[1]) - 1, parseInt(dateSplit[2]));
     }
     return new Date();
+  }
+
+  changeExibition(){
+    if(this.exibition){
+      this.teste = 'tgbNymZ7vqY'
+    }
+    else{
+      this.teste = '0Y5kKMAkKjc'
+    }
+    this.exibition = !this.exibition
+
   }
 }

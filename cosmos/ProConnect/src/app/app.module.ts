@@ -26,6 +26,7 @@ import { CpfPipe } from './services/pipelines/cpf.pipe';
 import { CEPPipe } from './services/pipelines/cep.pipe';
 import { MoneyPipe } from './services/pipelines/money.pipe';
 import { SaveUrlPipe } from './services/pipelines/save-url.pipe';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -47,12 +48,14 @@ import { SaveUrlPipe } from './services/pipelines/save-url.pipe';
     CEPPipe,
     MoneyPipe,
     SaveUrlPipe
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    YouTubePlayerModule
   ],
   providers: [
     CadService,
